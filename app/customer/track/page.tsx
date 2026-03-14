@@ -44,7 +44,7 @@ export default function TrackBusPage() {
                 src="/logo.jpg"
                 alt="VayaZed Logo"
                 className="w-12 h-12 rounded-xl border-2 border-primary-600"
-                style={{ objectFit: 'cover', objectPosition: 'center', background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)', boxShadow: '0 5px 12px rgba(0,0,0,0.18)' }}
+                style={{ objectFit: 'cover', objectPosition: 'center', background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)', boxShadow: '0 5px 12px rgba(0,0,0,0.18)' }}
               />
               <div>
                 <h1 className="text-2xl font-bold text-primary-600">Vayazed</h1>

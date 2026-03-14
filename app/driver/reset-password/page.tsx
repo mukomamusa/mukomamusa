@@ -82,14 +82,14 @@ export default function ResetPassword() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       <div style={{ maxWidth: '400px', margin: '0 auto', padding: '4rem 1rem' }}>
         <div style={{
           background: 'white',
           borderRadius: '1rem',
           padding: '2rem',
           boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-          border: '2px solid #E8F5E6'
+          border: '2px solid #E6F7F6'
         }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -108,9 +108,9 @@ export default function ResetPassword() {
               padding: '1rem',
               borderRadius: '0.5rem',
               marginBottom: '1rem',
-              background: message.type === 'success' ? '#E8F5E6' : '#FEE9E7',
-              border: `1px solid ${message.type === 'success' ? '#198A00' : '#DE2010'}`,
-              color: message.type === 'success' ? '#198A00' : '#DE2010',
+              background: message.type === 'success' ? '#E6F7F6' : '#E6F5F4',
+              border: `1px solid ${message.type === 'success' ? '#2BB2A9' : '#1A8A82'}`,
+              color: message.type === 'success' ? '#2BB2A9' : '#1A8A82',
               whiteSpace: 'pre-line'
             }}>
               {message.text}
@@ -125,7 +125,7 @@ export default function ResetPassword() {
                   display: 'block',
                   fontSize: '0.875rem',
                   fontWeight: '600',
-                  color: '#198A00',
+                  color: '#2BB2A9',
                   marginBottom: '0.5rem'
                 }}>
                   New Password
@@ -138,7 +138,7 @@ export default function ResetPassword() {
                   style={{
                     width: '100%',
                     padding: '0.75rem 1rem',
-                    border: '2px solid #198A00',
+                    border: '2px solid #2BB2A9',
                     borderRadius: '0.5rem',
                     fontSize: '1rem',
                     outline: 'none'
@@ -152,7 +152,7 @@ export default function ResetPassword() {
                   display: 'block',
                   fontSize: '0.875rem',
                   fontWeight: '600',
-                  color: '#198A00',
+                  color: '#2BB2A9',
                   marginBottom: '0.5rem'
                 }}>
                   Confirm Password
@@ -165,7 +165,7 @@ export default function ResetPassword() {
                   style={{
                     width: '100%',
                     padding: '0.75rem 1rem',
-                    border: '2px solid #198A00',
+                    border: '2px solid #2BB2A9',
                     borderRadius: '0.5rem',
                     fontSize: '1rem',
                     outline: 'none'
@@ -180,7 +180,7 @@ export default function ResetPassword() {
                 style={{
                   width: '100%',
                   padding: '0.875rem',
-                  background: loading ? '#9CA3AF' : 'linear-gradient(to right, #198A00, #EF7D00)',
+                  background: loading ? '#9CA3AF' : 'linear-gradient(to right, #2BB2A9, #659E85)',
                   color: 'white',
                   fontSize: '1rem',
                   fontWeight: '600',
@@ -201,7 +201,7 @@ export default function ResetPassword() {
             <Link 
               href="/driver/login"
               style={{ 
-                color: '#198A00', 
+                color: '#2BB2A9', 
                 fontSize: '0.875rem',
                 textDecoration: 'none',
                 fontWeight: '500'

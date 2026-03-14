@@ -99,7 +99,7 @@ function LoginFormContent() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #198A00 0%, #EF7D00 50%, #DE2010 100%)',
+      background: 'linear-gradient(135deg, #2BB2A9 0%, #659E85 50%, #1A8A82 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -192,7 +192,7 @@ function LoginFormContent() {
                 disabled={loading}
                 style={{
                   width: '100%',
-                  background: loading ? '#9CA3AF' : '#198A00',
+                  background: loading ? '#9CA3AF' : '#2BB2A9',
                   color: 'white',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
@@ -237,7 +237,7 @@ function LoginFormContent() {
                 disabled={loading || twoFactorCode.length !== 6}
                 style={{
                   width: '100%',
-                  background: loading || twoFactorCode.length !== 6 ? '#9CA3AF' : '#198A00',
+                  background: loading || twoFactorCode.length !== 6 ? '#9CA3AF' : '#2BB2A9',
                   color: 'white',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
@@ -373,7 +373,7 @@ function LoginFormContent() {
               disabled={loading}
               style={{
                 width: '100%',
-                background: loading ? '#9CA3AF' : 'linear-gradient(to right, #198A00, #EF7D00)',
+                background: loading ? '#9CA3AF' : 'linear-gradient(to right, #2BB2A9, #659E85)',
                 color: 'white',
                 padding: '0.75rem',
                 borderRadius: '0.5rem',
@@ -456,7 +456,7 @@ function LoginFormContent() {
                 setSuccess('');
               }}
               style={{
-                color: '#198A00',
+                color: '#2BB2A9',
                 fontWeight: '500',
                 background: 'none',
                 border: 'none',
@@ -484,13 +484,13 @@ function LoginFormContent() {
           <div style={{
             marginTop: '1.5rem',
             backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            border: '2px solid #198A00',
+            border: '2px solid #2BB2A9',
             borderRadius: '0.5rem',
             padding: '1rem'
           }}>
             <p style={{
               fontSize: '0.875rem',
-              color: '#198A00',
+              color: '#2BB2A9',
               fontWeight: '600',
               marginBottom: '0.5rem'
             }}>Demo Credentials:</p>

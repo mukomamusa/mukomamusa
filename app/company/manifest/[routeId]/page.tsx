@@ -161,7 +161,7 @@ export default function TripManifest() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#198A00] mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#2BB2A9] mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading trip manifest...</p>
         </div>
       </div>
@@ -177,7 +177,7 @@ export default function TripManifest() {
           </svg>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Unable to Load Manifest</h2>
           <p className="text-gray-600 mb-6">{error || 'Manifest not found'}</p>
-          <Link href="/company/dashboard" className="inline-block bg-[#198A00] text-white px-6 py-2 rounded-lg hover:bg-[#146d00] transition-colors">
+          <Link href="/company/dashboard" className="inline-block bg-[#2BB2A9] text-white px-6 py-2 rounded-lg hover:bg-[#146d00] transition-colors">
             Back to Dashboard
           </Link>
         </div>
@@ -201,7 +201,7 @@ export default function TripManifest() {
       `}</style>
 
       {/* Header */}
-      <header className="bg-[#198A00] text-white py-4 no-print">
+      <header className="bg-[#2BB2A9] text-white py-4 no-print">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <Link href="/company/dashboard" className="flex items-center gap-2 hover:opacity-80">
@@ -214,7 +214,7 @@ export default function TripManifest() {
           </div>
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 bg-white text-[#198A00] px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="flex items-center gap-2 bg-white text-[#2BB2A9] px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
@@ -233,7 +233,7 @@ export default function TripManifest() {
                 {manifest.route.origin} → {manifest.route.destination}
               </h2>
               <p className="text-gray-600 mt-1">{formatDate(manifest.route.date)}</p>
-              <p className="text-lg font-medium text-[#198A00] mt-2">
+              <p className="text-lg font-medium text-[#2BB2A9] mt-2">
                 Departure: {formatTime(manifest.route.departure_time)}
                 {manifest.route.arrival_time && ` | Arrival: ${formatTime(manifest.route.arrival_time)}`}
               </p>
@@ -262,7 +262,7 @@ export default function TripManifest() {
         {/* Statistics Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4 text-center">
-            <p className="text-3xl font-bold text-[#198A00]">{stats.booked_seats}</p>
+            <p className="text-3xl font-bold text-[#2BB2A9]">{stats.booked_seats}</p>
             <p className="text-sm text-gray-600">Passengers</p>
           </div>
           <div className="bg-white rounded-lg shadow p-4 text-center">
@@ -331,7 +331,7 @@ export default function TripManifest() {
 
         {/* Passenger List */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="bg-[#198A00] text-white px-6 py-4">
+          <div className="bg-[#2BB2A9] text-white px-6 py-4">
             <h3 className="text-lg font-bold">Passenger List</h3>
             <p className="text-sm opacity-90">Total: {manifest.passengers.length} passengers</p>
           </div>
@@ -362,7 +362,7 @@ export default function TripManifest() {
                   {manifest.passengers.map((passenger, index) => (
                     <tr key={passenger.passenger_id || index} className="hover:bg-gray-50">
                       <td className="px-4 py-3">
-                        <span className="inline-flex items-center justify-center w-8 h-8 bg-[#198A00] text-white rounded-full font-bold text-sm">
+                        <span className="inline-flex items-center justify-center w-8 h-8 bg-[#2BB2A9] text-white rounded-full font-bold text-sm">
                           {passenger.seat_number}
                         </span>
                       </td>

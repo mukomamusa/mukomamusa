@@ -70,13 +70,13 @@ export default function DriverActivityLog({ driverId, driverName, onClose }: Pro
   };
 
   const getActionColor = (action: string, status: string) => {
-    if (status === 'failure') return '#DE2010';
+    if (status === 'failure') return '#1A8A82';
     
     const colors: Record<string, string> = {
-      'login_success': '#198A00',
-      'login_failed': '#DE2010',
-      'password_reset': '#EF7D00',
-      'booking_created': '#198A00',
+      'login_success': '#2BB2A9',
+      'login_failed': '#1A8A82',
+      'password_reset': '#659E85',
+      'booking_created': '#2BB2A9',
       'profile_updated': '#00A86B'
     };
     return colors[action] || '#666';
@@ -201,8 +201,8 @@ export default function DriverActivityLog({ driverId, driverName, onClose }: Pro
                           <span
                             className="px-2 py-1 rounded-full text-xs font-medium"
                             style={{
-                              backgroundColor: log.status === 'success' ? '#E8F5E6' : '#FEE9E7',
-                              color: log.status === 'success' ? '#198A00' : '#DE2010'
+                              backgroundColor: log.status === 'success' ? '#E6F7F6' : '#E6F5F4',
+                              color: log.status === 'success' ? '#2BB2A9' : '#1A8A82'
                             }}
                           >
                             {log.status}

@@ -468,9 +468,9 @@ useEffect(() => {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, #f3f4f6, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, #f3f4f6, #E8F3EC)' }}>
       {/* Header - Zambian Theme */}
-      <header style={{ background: 'linear-gradient(to right, #0D5200, #083E00)', color: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #EF7D00', position: 'sticky', top: 0, zIndex: 1000 }}>
+      <header style={{ background: 'linear-gradient(to right, #197670, #13625D)', color: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #659E85', position: 'sticky', top: 0, zIndex: 1000 }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '1rem 1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
@@ -483,8 +483,8 @@ useEffect(() => {
                   objectFit: 'cover',
                   objectPosition: 'center',
                   borderRadius: '0.75rem',
-                  background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)',
-                  border: '2px solid #EF7D00',
+                  background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)',
+                  border: '2px solid #659E85',
                   boxShadow: '0 6px 14px rgba(0, 0, 0, 0.25)'
                 }}
               />
@@ -501,7 +501,7 @@ useEffect(() => {
                 href="/admin/users"
                 style={{
                   padding: '0.5rem 1rem',
-                  background: '#EF7D00',
+                  background: '#659E85',
                   color: 'white',
                   border: 'none',
                   borderRadius: '0.5rem',
@@ -517,7 +517,7 @@ useEffect(() => {
                 href="/admin/agents"
                 style={{
                   padding: '0.5rem 1rem',
-                  background: '#198A00',
+                  background: '#2BB2A9',
                   color: 'white',
                   border: 'none',
                   borderRadius: '0.5rem',
@@ -533,7 +533,7 @@ useEffect(() => {
                 onClick={handleLogout}
                 style={{
                   padding: '0.5rem 1rem',
-                  background: '#DE2010',
+                  background: '#1A8A82',
                   color: 'white',
                   border: 'none',
                   borderRadius: '0.5rem',
@@ -559,10 +559,10 @@ useEffect(() => {
                 onClick={() => setActiveTab(tab)}
                 style={{
                   padding: '1rem 1.5rem',
-                  background: activeTab === tab ? '#E8F5E6' : 'transparent',
+                  background: activeTab === tab ? '#E6F7F6' : 'transparent',
                   border: 'none',
-                  borderBottom: activeTab === tab ? '3px solid #198A00' : '3px solid transparent',
-                  color: activeTab === tab ? '#198A00' : '#6b7280',
+                  borderBottom: activeTab === tab ? '3px solid #2BB2A9' : '3px solid transparent',
+                  color: activeTab === tab ? '#2BB2A9' : '#6b7280',
                   fontWeight: activeTab === tab ? '600' : '500',
                   cursor: 'pointer',
                   textTransform: 'capitalize',
@@ -583,7 +583,7 @@ useEffect(() => {
         {activeTab === 'overview' && stats && (
           <div>
             {/* Platform Earnings Section */}
-            <div style={{ marginBottom: '2rem', background: 'linear-gradient(135deg, #0D5200 0%, #083E00 100%)', borderRadius: '1rem', padding: '1.5rem', color: 'white' }}>
+            <div style={{ marginBottom: '2rem', background: 'linear-gradient(135deg, #197670 0%, #13625D 100%)', borderRadius: '1rem', padding: '1.5rem', color: 'white' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                 <span style={{ fontSize: '1.5rem' }}>💎</span>
                 <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>Platform Revenue</h2>
@@ -920,7 +920,7 @@ useEffect(() => {
                       <td style={tdStyle}>{c.bookingCount}</td>
                       <td style={tdStyle}>K{c.revenue.toLocaleString()}</td>
                       <td style={{...tdStyle, color: '#dc2626', fontSize: '0.75rem'}}>-K{(c.commissionPaid || 0).toLocaleString()}</td>
-                      <td style={{...tdStyle, color: '#198A00', fontWeight: '600'}}>K{(c.netEarnings || 0).toLocaleString()}</td>
+                      <td style={{...tdStyle, color: '#2BB2A9', fontWeight: '600'}}>K{(c.netEarnings || 0).toLocaleString()}</td>
                     </tr>
                   ))}
                   {paginatedCompanies.length === 0 && (

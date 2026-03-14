@@ -158,7 +158,7 @@ export default function AgentLogin() {
   return (
     <div style={{ 
       minHeight: '100vh', 
-      background: 'linear-gradient(135deg, #083E00 0%, #0D5200 50%, #198A00 100%)',
+      background: 'linear-gradient(135deg, #13625D 0%, #197670 50%, #2BB2A9 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -174,7 +174,7 @@ export default function AgentLogin() {
       }}>
         {/* Header */}
         <div style={{ 
-          background: 'linear-gradient(to right, #198A00, #116600)',
+          background: 'linear-gradient(to right, #2BB2A9, #1F8A83)',
           padding: '2rem',
           textAlign: 'center',
           color: 'white'
@@ -210,9 +210,9 @@ export default function AgentLogin() {
         <div style={{ padding: '2rem' }}>
           {error && (
             <div style={{ 
-              background: '#FEE9E7', 
-              border: '1px solid #DE2010',
-              color: '#DE2010',
+              background: '#E6F5F4', 
+              border: '1px solid #1A8A82',
+              color: '#1A8A82',
               padding: '0.75rem', 
               borderRadius: '0.5rem',
               marginBottom: '1rem',
@@ -224,9 +224,9 @@ export default function AgentLogin() {
 
           {success && (
             <div style={{ 
-              background: '#E8F5E6', 
-              border: '1px solid #198A00',
-              color: '#198A00',
+              background: '#E6F7F6', 
+              border: '1px solid #2BB2A9',
+              color: '#2BB2A9',
               padding: '0.75rem', 
               borderRadius: '0.5rem',
               marginBottom: '1rem',
@@ -284,7 +284,7 @@ export default function AgentLogin() {
                 style={{
                   width: '100%',
                   padding: '0.75rem',
-                  background: loading ? '#9CA3AF' : '#198A00',
+                  background: loading ? '#9CA3AF' : '#2BB2A9',
                   color: 'white',
                   border: 'none',
                   borderRadius: '0.5rem',
@@ -401,14 +401,14 @@ export default function AgentLogin() {
                   style={{
                     width: '100%',
                     padding: '0.625rem',
-                    border: errors.contact_phone ? '1px solid #DE2010' : '1px solid #D1D5DB',
+                    border: errors.contact_phone ? '1px solid #1A8A82' : '1px solid #D1D5DB',
                     borderRadius: '0.5rem',
                     fontSize: '0.875rem',
                     backgroundColor: errors.contact_phone ? '#FEF2F2' : 'white'
                   }}
                 />
                 {errors.contact_phone && (
-                  <p style={{ color: '#DE2010', fontSize: '0.75rem', marginTop: '0.25rem' }}>{errors.contact_phone}</p>
+                  <p style={{ color: '#1A8A82', fontSize: '0.75rem', marginTop: '0.25rem' }}>{errors.contact_phone}</p>
                 )}
               </div>
 
@@ -430,14 +430,14 @@ export default function AgentLogin() {
                   style={{
                     width: '100%',
                     padding: '0.625rem',
-                    border: errors.nrc_number ? '1px solid #DE2010' : '1px solid #D1D5DB',
+                    border: errors.nrc_number ? '1px solid #1A8A82' : '1px solid #D1D5DB',
                     borderRadius: '0.5rem',
                     fontSize: '0.875rem',
                     backgroundColor: errors.nrc_number ? '#FEF2F2' : 'white'
                   }}
                 />
                 {errors.nrc_number && (
-                  <p style={{ color: '#DE2010', fontSize: '0.75rem', marginTop: '0.25rem' }}>{errors.nrc_number}</p>
+                  <p style={{ color: '#1A8A82', fontSize: '0.75rem', marginTop: '0.25rem' }}>{errors.nrc_number}</p>
                 )}
               </div>
 
@@ -578,7 +578,7 @@ export default function AgentLogin() {
                 style={{
                   width: '100%',
                   padding: '0.75rem',
-                  background: loading ? '#9CA3AF' : '#EF7D00',
+                  background: loading ? '#9CA3AF' : '#659E85',
                   color: 'white',
                   border: 'none',
                   borderRadius: '0.5rem',
@@ -605,7 +605,7 @@ export default function AgentLogin() {
               style={{
                 background: 'none',
                 border: 'none',
-                color: '#198A00',
+                color: '#2BB2A9',
                 fontSize: '0.875rem',
                 cursor: 'pointer',
                 textDecoration: 'underline'

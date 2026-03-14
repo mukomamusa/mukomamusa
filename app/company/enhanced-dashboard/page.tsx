@@ -1563,9 +1563,9 @@ export default function EnhancedCompanyDashboard() {
   if (!user) return null;
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div className="min-h-screen" style={{ background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       {/* Enhanced Header - Zambian Theme */}
-      <header style={{ background: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #198A00', position: 'sticky', top: 0, zIndex: 1000 }}>
+      <header style={{ background: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #2BB2A9', position: 'sticky', top: 0, zIndex: 1000 }}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
@@ -1573,10 +1573,10 @@ export default function EnhancedCompanyDashboard() {
                 <img
                   src="/logo.jpg"
                   alt="VayaZed Logo"
-                  style={{ width: '52px', height: '52px', objectFit: 'cover', objectPosition: 'center', borderRadius: '0.75rem', background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)', border: '2px solid #198A00', boxShadow: '0 6px 14px rgba(0, 0, 0, 0.2)' }}
+                  style={{ width: '52px', height: '52px', objectFit: 'cover', objectPosition: 'center', borderRadius: '0.75rem', background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)', border: '2px solid #2BB2A9', boxShadow: '0 6px 14px rgba(0, 0, 0, 0.2)' }}
                 />
                 <div>
-                  <h1 style={{ fontSize: '1.25rem', fontWeight: 'bold', background: 'linear-gradient(to right, #198A00, #EF7D00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Company Dashboard</h1>
+                  <h1 style={{ fontSize: '1.25rem', fontWeight: 'bold', background: 'linear-gradient(to right, #2BB2A9, #659E85)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Company Dashboard</h1>
                   <p className="text-sm text-gray-600">{user.company_name || user.name}</p>
                 </div>
               </Link>
@@ -1626,9 +1626,9 @@ export default function EnhancedCompanyDashboard() {
                   padding: '1rem 1.5rem',
                   fontWeight: '500',
                   transition: 'all 0.2s',
-                  borderBottom: activeTab === tab.id ? '3px solid #198A00' : '3px solid transparent',
-                  color: activeTab === tab.id ? '#198A00' : '#4b5563',
-                  background: activeTab === tab.id ? '#E8F5E6' : 'transparent'
+                  borderBottom: activeTab === tab.id ? '3px solid #2BB2A9' : '3px solid transparent',
+                  color: activeTab === tab.id ? '#2BB2A9' : '#4b5563',
+                  background: activeTab === tab.id ? '#E6F7F6' : 'transparent'
                 }}
               >
                 <span className="text-lg">{tab.icon}</span>
@@ -1640,7 +1640,7 @@ export default function EnhancedCompanyDashboard() {
 
         {loading ? (
           <div className="text-center py-12">
-            <svg style={{ width: '3rem', height: '3rem', color: '#198A00' }} className="animate-spin mx-auto mb-4" fill="none" viewBox="0 0 24 24">
+            <svg style={{ width: '3rem', height: '3rem', color: '#2BB2A9' }} className="animate-spin mx-auto mb-4" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>

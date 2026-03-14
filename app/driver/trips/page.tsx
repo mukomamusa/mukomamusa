@@ -122,14 +122,14 @@ export default function DriverTrips() {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
           <div style={{ textAlign: 'center' }}>
             <div style={{ 
               width: '3rem', 
               height: '3rem', 
-              border: '3px solid #E8F5E6',
-              borderTop: '3px solid #198A00',
+              border: '3px solid #E6F7F6',
+              borderTop: '3px solid #2BB2A9',
               borderRadius: '50%',
               animation: 'spin 1s linear infinite',
               margin: '0 auto 1rem'
@@ -145,12 +145,12 @@ export default function DriverTrips() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       {/* Header */}
       <header style={{ 
         background: 'white', 
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-        borderBottom: '4px solid #198A00',
+        borderBottom: '4px solid #2BB2A9',
         position: 'sticky',
         top: 0,
         zIndex: 1000
@@ -167,8 +167,8 @@ export default function DriverTrips() {
                   objectFit: 'cover',
                   objectPosition: 'center',
                   borderRadius: '0.75rem',
-                  background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)',
-                  border: '2px solid #198A00',
+                  background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)',
+                  border: '2px solid #2BB2A9',
                   boxShadow: '0 5px 12px rgba(0, 0, 0, 0.18)'
                 }}
               />
@@ -178,7 +178,7 @@ export default function DriverTrips() {
                   display: 'flex', 
                   alignItems: 'center', 
                   gap: '0.5rem',
-                  color: '#198A00',
+                  color: '#2BB2A9',
                   textDecoration: 'none'
                 }}
               >
@@ -189,7 +189,7 @@ export default function DriverTrips() {
                 <h1 style={{ 
                   fontSize: '1.5rem', 
                   fontWeight: 'bold',
-                  background: 'linear-gradient(to right, #198A00, #EF7D00)',
+                  background: 'linear-gradient(to right, #2BB2A9, #659E85)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
                 }}>
@@ -202,7 +202,7 @@ export default function DriverTrips() {
               onClick={handleLogout}
               style={{
                 padding: '0.5rem 1rem',
-                background: '#DE2010',
+                background: '#1A8A82',
                 color: 'white',
                 border: 'none',
                 borderRadius: '0.5rem',
@@ -223,10 +223,10 @@ export default function DriverTrips() {
           <div style={{
             marginBottom: '1rem',
             padding: '1rem',
-            background: '#FEE9E7',
-            border: '1px solid #DE2010',
+            background: '#E6F5F4',
+            border: '1px solid #1A8A82',
             borderRadius: '0.5rem',
-            color: '#DE2010',
+            color: '#1A8A82',
             display: 'flex',
             alignItems: 'center',
             gap: '0.5rem'
@@ -242,7 +242,7 @@ export default function DriverTrips() {
           borderRadius: '1rem',
           padding: '1.5rem',
           marginBottom: '2rem',
-          border: '2px solid #E8F5E6',
+          border: '2px solid #E6F7F6',
           boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
         }}>
           <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1f2937', marginBottom: '1rem' }}>
@@ -251,11 +251,11 @@ export default function DriverTrips() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }}>
             <div>
               <p style={{ fontSize: '0.875rem', color: '#666' }}>Total Trips</p>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#198A00' }}>{trips.length}</p>
+              <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2BB2A9' }}>{trips.length}</p>
             </div>
             <div>
               <p style={{ fontSize: '0.875rem', color: '#666' }}>Upcoming</p>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#EF7D00' }}>
+              <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#659E85' }}>
                 {trips.filter(t => isUpcoming(t.date)).length}
               </p>
             </div>
@@ -267,7 +267,7 @@ export default function DriverTrips() {
             </div>
             <div>
               <p style={{ fontSize: '0.875rem', color: '#666' }}>Completed</p>
-              <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#DE2010' }}>
+              <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#1A8A82' }}>
                 {trips.filter(t => isPast(t.date)).length}
               </p>
             </div>
@@ -280,20 +280,20 @@ export default function DriverTrips() {
           borderRadius: '1rem',
           padding: '1rem',
           marginBottom: '2rem',
-          border: '2px solid #E8F5E6',
+          border: '2px solid #E6F7F6',
           display: 'flex',
           gap: '1rem',
           flexWrap: 'wrap',
           alignItems: 'center'
         }}>
-          <span style={{ fontWeight: '600', color: '#198A00' }}>Filter:</span>
+          <span style={{ fontWeight: '600', color: '#2BB2A9' }}>Filter:</span>
           <button
             onClick={() => setFilter('upcoming')}
             style={{
               padding: '0.5rem 1rem',
-              background: filter === 'upcoming' ? '#198A00' : '#E8F5E6',
-              color: filter === 'upcoming' ? 'white' : '#198A00',
-              border: '2px solid #198A00',
+              background: filter === 'upcoming' ? '#2BB2A9' : '#E6F7F6',
+              color: filter === 'upcoming' ? 'white' : '#2BB2A9',
+              border: '2px solid #2BB2A9',
               borderRadius: '2rem',
               cursor: 'pointer',
               fontWeight: '500',
@@ -306,7 +306,7 @@ export default function DriverTrips() {
             onClick={() => setFilter('today')}
             style={{
               padding: '0.5rem 1rem',
-              background: filter === 'today' ? '#00A86B' : '#E8F5E6',
+              background: filter === 'today' ? '#00A86B' : '#E6F7F6',
               color: filter === 'today' ? 'white' : '#00A86B',
               border: '2px solid #00A86B',
               borderRadius: '2rem',
@@ -321,9 +321,9 @@ export default function DriverTrips() {
             onClick={() => setFilter('all')}
             style={{
               padding: '0.5rem 1rem',
-              background: filter === 'all' ? '#EF7D00' : '#FFF3E6',
-              color: filter === 'all' ? 'white' : '#EF7D00',
-              border: '2px solid #EF7D00',
+              background: filter === 'all' ? '#659E85' : '#E8F3EC',
+              color: filter === 'all' ? 'white' : '#659E85',
+              border: '2px solid #659E85',
               borderRadius: '2rem',
               cursor: 'pointer',
               fontWeight: '500',
@@ -336,9 +336,9 @@ export default function DriverTrips() {
             onClick={() => setFilter('past')}
             style={{
               padding: '0.5rem 1rem',
-              background: filter === 'past' ? '#DE2010' : '#FEE9E7',
-              color: filter === 'past' ? 'white' : '#DE2010',
-              border: '2px solid #DE2010',
+              background: filter === 'past' ? '#1A8A82' : '#E6F5F4',
+              color: filter === 'past' ? 'white' : '#1A8A82',
+              border: '2px solid #1A8A82',
               borderRadius: '2rem',
               cursor: 'pointer',
               fontWeight: '500',
@@ -356,7 +356,7 @@ export default function DriverTrips() {
             borderRadius: '1rem',
             padding: '3rem',
             textAlign: 'center',
-            border: '2px solid #E8F5E6'
+            border: '2px solid #E6F7F6'
           }}>
             <div style={{ fontSize: '4rem', marginBottom: '1rem', opacity: 0.5 }}>🗓️</div>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1f2937', marginBottom: '0.5rem' }}>
@@ -375,10 +375,10 @@ export default function DriverTrips() {
               <h2 style={{
                 fontSize: '1.25rem',
                 fontWeight: 'bold',
-                color: '#198A00',
+                color: '#2BB2A9',
                 marginBottom: '1rem',
                 paddingBottom: '0.5rem',
-                borderBottom: '2px solid #EF7D00'
+                borderBottom: '2px solid #659E85'
               }}>
                 {monthYear}
               </h2>
@@ -398,7 +398,7 @@ export default function DriverTrips() {
                         display: 'block',
                         padding: '1.5rem',
                         background: 'white',
-                        border: `2px solid ${today ? '#198A00' : past ? '#DE2010' : '#E8F5E6'}`,
+                        border: `2px solid ${today ? '#2BB2A9' : past ? '#1A8A82' : '#E6F7F6'}`,
                         borderRadius: '0.75rem',
                         textDecoration: 'none',
                         transition: 'all 0.2s',
@@ -407,13 +407,13 @@ export default function DriverTrips() {
                       }}
                       onMouseEnter={(e) => {
                         if (!past) {
-                          e.currentTarget.style.borderColor = '#198A00';
+                          e.currentTarget.style.borderColor = '#2BB2A9';
                           e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
                         }
                       }}
                       onMouseLeave={(e) => {
                         if (!past) {
-                          e.currentTarget.style.borderColor = today ? '#198A00' : '#E8F5E6';
+                          e.currentTarget.style.borderColor = today ? '#2BB2A9' : '#E6F7F6';
                           e.currentTarget.style.boxShadow = 'none';
                         }
                       }}
@@ -425,14 +425,14 @@ export default function DriverTrips() {
                               <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1f2937' }}>
                                 {trip.origin}
                               </span>
-                              <span style={{ color: '#198A00' }}>→</span>
+                              <span style={{ color: '#2BB2A9' }}>→</span>
                               <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1f2937' }}>
                                 {trip.destination}
                               </span>
                               {today && (
                                 <span style={{
                                   padding: '0.25rem 0.75rem',
-                                  background: '#198A00',
+                                  background: '#2BB2A9',
                                   color: 'white',
                                   borderRadius: '9999px',
                                   fontSize: '0.75rem',
@@ -444,7 +444,7 @@ export default function DriverTrips() {
                               {past && (
                                 <span style={{
                                   padding: '0.25rem 0.75rem',
-                                  background: '#DE2010',
+                                  background: '#1A8A82',
                                   color: 'white',
                                   borderRadius: '9999px',
                                   fontSize: '0.75rem',
@@ -467,8 +467,8 @@ export default function DriverTrips() {
                             borderRadius: '9999px',
                             fontSize: '0.75rem',
                             fontWeight: '600',
-                            background: past ? '#FEE9E7' : '#E8F5E6',
-                            color: past ? '#DE2010' : '#198A00'
+                            background: past ? '#E6F5F4' : '#E6F7F6',
+                            color: past ? '#1A8A82' : '#2BB2A9'
                           }}>
                             {trip.status}
                           </span>
@@ -478,15 +478,15 @@ export default function DriverTrips() {
                           <div>
                             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.875rem', marginBottom: '0.25rem' }}>
                               <span style={{ color: '#666' }}>Boarding Progress</span>
-                              <span style={{ color: '#198A00', fontWeight: '600' }}>
+                              <span style={{ color: '#2BB2A9', fontWeight: '600' }}>
                                 {trip.boarded_count}/{trip.total_bookings}
                               </span>
                             </div>
-                            <div style={{ height: '0.5rem', background: '#E8F5E6', borderRadius: '9999px', overflow: 'hidden' }}>
+                            <div style={{ height: '0.5rem', background: '#E6F7F6', borderRadius: '9999px', overflow: 'hidden' }}>
                               <div style={{
                                 width: `${progress}%`,
                                 height: '100%',
-                                background: 'linear-gradient(to right, #198A00, #EF7D00)',
+                                background: 'linear-gradient(to right, #2BB2A9, #659E85)',
                                 borderRadius: '9999px'
                               }} />
                             </div>

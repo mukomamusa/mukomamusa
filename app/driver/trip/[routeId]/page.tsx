@@ -157,14 +157,14 @@ const fetchManifest = async () => {
 
   if (loading) {
     return (
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
           <div style={{ textAlign: 'center' }}>
             <div style={{ 
               width: '3rem', 
               height: '3rem', 
-              border: '3px solid #E8F5E6',
-              borderTop: '3px solid #198A00',
+              border: '3px solid #E6F7F6',
+              borderTop: '3px solid #2BB2A9',
               borderRadius: '50%',
               animation: 'spin 1s linear infinite',
               margin: '0 auto 1rem'
@@ -181,12 +181,12 @@ const fetchManifest = async () => {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       {/* Header */}
       <header style={{ 
         background: 'white', 
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-        borderBottom: '4px solid #198A00',
+        borderBottom: '4px solid #2BB2A9',
         position: 'sticky',
         top: 0,
         zIndex: 1000
@@ -199,7 +199,7 @@ const fetchManifest = async () => {
                 display: 'flex', 
                 alignItems: 'center', 
                 gap: '0.5rem',
-                color: '#198A00',
+                color: '#2BB2A9',
                 textDecoration: 'none'
               }}
             >
@@ -211,7 +211,7 @@ const fetchManifest = async () => {
                 href={`/driver/scan?routeId=${routeId}`}
                 style={{
                   padding: '0.5rem 1rem',
-                  background: 'linear-gradient(to right, #198A00, #116600)',
+                  background: 'linear-gradient(to right, #2BB2A9, #1F8A83)',
                   color: 'white',
                   borderRadius: '0.5rem',
                   textDecoration: 'none',
@@ -234,10 +234,10 @@ const fetchManifest = async () => {
     maxWidth: '1200px',
     margin: '1rem auto',
     padding: '1rem',
-    background: '#FEE9E7',
-    border: '2px solid #DE2010',
+    background: '#E6F5F4',
+    border: '2px solid #1A8A82',
     borderRadius: '0.5rem',
-    color: '#DE2010',
+    color: '#1A8A82',
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem'
@@ -255,7 +255,7 @@ const fetchManifest = async () => {
             borderRadius: '1rem',
             padding: '1.5rem',
             marginBottom: '2rem',
-            border: '2px solid #E8F5E6',
+            border: '2px solid #E6F7F6',
             boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
@@ -282,7 +282,7 @@ const fetchManifest = async () => {
             }}>
               <div>
                 <p style={{ fontSize: '0.75rem', color: '#666' }}>Total</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#198A00' }}>{summary.total_passengers}</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2BB2A9' }}>{summary.total_passengers}</p>
               </div>
               <div>
                 <p style={{ fontSize: '0.75rem', color: '#666' }}>Boarded</p>
@@ -290,11 +290,11 @@ const fetchManifest = async () => {
               </div>
               <div>
                 <p style={{ fontSize: '0.75rem', color: '#666' }}>Not Boarded</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#EF7D00' }}>{summary.not_boarded}</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#659E85' }}>{summary.not_boarded}</p>
               </div>
               <div>
                 <p style={{ fontSize: '0.75rem', color: '#666' }}>Missed</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#DE2010' }}>{summary.missed}</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1A8A82' }}>{summary.missed}</p>
               </div>
             </div>
           </div>
@@ -306,7 +306,7 @@ const fetchManifest = async () => {
           borderRadius: '1rem',
           padding: '1rem',
           marginBottom: '1rem',
-          border: '2px solid #E8F5E6'
+          border: '2px solid #E6F7F6'
         }}>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <div style={{ flex: '2', minWidth: '200px' }}>
@@ -318,7 +318,7 @@ const fetchManifest = async () => {
                 style={{
                   width: '100%',
                   padding: '0.75rem',
-                  border: '2px solid #198A00',
+                  border: '2px solid #2BB2A9',
                   borderRadius: '0.5rem',
                   fontSize: '0.875rem',
                   outline: 'none'
@@ -332,7 +332,7 @@ const fetchManifest = async () => {
                 style={{
                   width: '100%',
                   padding: '0.75rem',
-                  border: '2px solid #198A00',
+                  border: '2px solid #2BB2A9',
                   borderRadius: '0.5rem',
                   fontSize: '0.875rem',
                   background: 'white'
@@ -356,22 +356,22 @@ const fetchManifest = async () => {
       
       return (
         <div key={bookingRef} style={{
-          background: '#E8F5E6',
+          background: '#E6F7F6',
           borderRadius: '0.5rem',
           padding: '0.75rem',
           marginBottom: '0.5rem'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
-              <span style={{ fontWeight: '600', color: '#198A00' }}>Booking: {bookingRef}</span>
+              <span style={{ fontWeight: '600', color: '#2BB2A9' }}>Booking: {bookingRef}</span>
               <span style={{ marginLeft: '1rem', fontSize: '0.875rem', color: '#666' }}>
                 {boardedInBooking}/{bookingPassengers.length} boarded
               </span>
             </div>
             {boardedInBooking === bookingPassengers.length ? (
-              <span style={{ color: '#198A00', fontSize: '0.875rem' }}>✅ Complete</span>
+              <span style={{ color: '#2BB2A9', fontSize: '0.875rem' }}>✅ Complete</span>
             ) : (
-              <span style={{ color: '#EF7D00', fontSize: '0.875rem' }}>⏳ Pending</span>
+              <span style={{ color: '#659E85', fontSize: '0.875rem' }}>⏳ Pending</span>
             )}
           </div>
         </div>
@@ -383,7 +383,7 @@ const fetchManifest = async () => {
         <div style={{
           background: 'white',
           borderRadius: '1rem',
-          border: '2px solid #E8F5E6',
+          border: '2px solid #E6F7F6',
           overflow: 'hidden'
         }}>
           {filteredPassengers.length === 0 ? (
@@ -399,7 +399,7 @@ const fetchManifest = async () => {
                   style={{
                     padding: '1.5rem',
                     borderBottom: '1px solid #e5e7eb',
-                    background: passenger.boarding_status === 'boarded' ? '#E8F5E6' : 'white'
+                    background: passenger.boarding_status === 'boarded' ? '#E6F7F6' : 'white'
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', flexWrap: 'wrap', gap: '1rem' }}>
@@ -408,8 +408,8 @@ const fetchManifest = async () => {
                         <span style={{ fontWeight: '600', color: '#1f2937' }}>{passenger.full_name}</span>
                         <span style={{
                           padding: '0.25rem 0.75rem',
-                          background: '#E8F5E6',
-                          color: '#198A00',
+                          background: '#E6F7F6',
+                          color: '#2BB2A9',
                           borderRadius: '9999px',
                           fontSize: '0.75rem',
                           fontWeight: '600'
@@ -422,9 +422,9 @@ const fetchManifest = async () => {
                           fontSize: '0.75rem',
                           fontWeight: '600',
                           background: passenger.boarding_status === 'boarded' ? '#00A86B20' :
-                                     passenger.boarding_status === 'missed' ? '#DE201020' : '#EF7D0020',
+                                     passenger.boarding_status === 'missed' ? '#1A8A8220' : '#659E8520',
                           color: passenger.boarding_status === 'boarded' ? '#00A86B' :
-                                 passenger.boarding_status === 'missed' ? '#DE2010' : '#EF7D00'
+                                 passenger.boarding_status === 'missed' ? '#1A8A82' : '#659E85'
                         }}>
                           {passenger.boarding_status}
                         </span>
@@ -438,7 +438,7 @@ const fetchManifest = async () => {
                       </div>
                       
                       {passenger.special_needs && (
-                        <div style={{ marginTop: '0.5rem', fontSize: '0.875rem', color: '#DE2010' }}>
+                        <div style={{ marginTop: '0.5rem', fontSize: '0.875rem', color: '#1A8A82' }}>
                           ⚠️ {passenger.special_needs}
                         </div>
                       )}
@@ -450,7 +450,7 @@ const fetchManifest = async () => {
                         disabled={processing === passenger.passenger_id}
                         style={{
                           padding: '0.75rem 1.5rem',
-                          background: processing === passenger.passenger_id ? '#ccc' : '#198A00',
+                          background: processing === passenger.passenger_id ? '#ccc' : '#2BB2A9',
                           color: 'white',
                           border: 'none',
                           borderRadius: '0.5rem',
@@ -486,8 +486,8 @@ const fetchManifest = async () => {
                     {passenger.boarding_status === 'boarded' && (
                       <div style={{
                         padding: '0.75rem 1.5rem',
-                        background: '#E8F5E6',
-                        color: '#198A00',
+                        background: '#E6F7F6',
+                        color: '#2BB2A9',
                         borderRadius: '0.5rem',
                         fontSize: '0.875rem',
                         fontWeight: '500',

@@ -440,12 +440,12 @@ useEffect(() => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       {/* Header with Zambian Flag Colors */}
       <header style={{ 
         background: 'white', 
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-        borderBottom: '4px solid #198A00',
+        borderBottom: '4px solid #2BB2A9',
         position: 'sticky',
         top: 0,
         zIndex: 1000
@@ -464,8 +464,8 @@ useEffect(() => {
                   objectFit: 'cover',
                   objectPosition: 'center',
                   borderRadius: '0.75rem',
-                  background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)',
-                  border: '2px solid #198A00',
+                  background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)',
+                  border: '2px solid #2BB2A9',
                   boxShadow: '0 6px 14px rgba(0, 0, 0, 0.2)'
                 }}
               />
@@ -473,7 +473,7 @@ useEffect(() => {
                 <h1 style={{ 
                   fontSize: '1.875rem', 
                   fontWeight: 'bold',
-                  background: 'linear-gradient(to right, #198A00, #EF7D00)',
+                  background: 'linear-gradient(to right, #2BB2A9, #659E85)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
@@ -491,7 +491,7 @@ useEffect(() => {
                     href={getDashboardLink()}
                     style={{
                       padding: '0.625rem 1.25rem',
-                      background: 'linear-gradient(to right, #198A00, #116600)',
+                      background: 'linear-gradient(to right, #2BB2A9, #1F8A83)',
                       color: 'white',
                       borderRadius: '0.5rem',
                       fontWeight: '600',
@@ -519,17 +519,17 @@ useEffect(() => {
                         gap: '0.5rem',
                         padding: '0.5rem 1rem',
                         background: '#f0f9f0',
-                        border: '2px solid #198A00',
+                        border: '2px solid #2BB2A9',
                         borderRadius: '0.5rem',
                         cursor: 'pointer',
                         fontWeight: '500',
-                        color: '#198A00'
+                        color: '#2BB2A9'
                       }}
                     >
                       <div style={{
                         width: '2rem',
                         height: '2rem',
-                        background: 'linear-gradient(to right, #198A00, #EF7D00)',
+                        background: 'linear-gradient(to right, #2BB2A9, #659E85)',
                         borderRadius: '50%',
                         display: 'flex',
                         alignItems: 'center',
@@ -564,7 +564,7 @@ useEffect(() => {
                       }}>
                         {/* User Info */}
                         <div style={{ padding: '1rem', borderBottom: '1px solid #e5e7eb', background: '#f9fafb' }}>
-                          <p style={{ fontWeight: '600', color: '#198A00', marginBottom: '0.25rem' }}>{user.name}</p>
+                          <p style={{ fontWeight: '600', color: '#2BB2A9', marginBottom: '0.25rem' }}>{user.name}</p>
                           <p style={{ fontSize: '0.75rem', color: '#666' }}>{user.email}</p>
                           <span style={{ 
                             display: 'inline-block',
@@ -585,7 +585,7 @@ useEffect(() => {
                         {user.user_type === 'customer' && (
                           <>
                             <Link href="/customer/dashboard" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', color: '#374151', textDecoration: 'none', transition: 'background 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.background = '#f3f4f6'} onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
-                              <svg style={{ width: '1.25rem', height: '1.25rem', color: '#198A00' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <svg style={{ width: '1.25rem', height: '1.25rem', color: '#2BB2A9' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
                               </svg>
                               My Bookings
@@ -627,8 +627,8 @@ useEffect(() => {
                     href="/customer/login" 
                     style={{
                       padding: '0.625rem 1.25rem',
-                      color: '#198A00',
-                      border: '2px solid #198A00',
+                      color: '#2BB2A9',
+                      border: '2px solid #2BB2A9',
                       borderRadius: '0.5rem',
                       fontWeight: '600',
                       textDecoration: 'none',
@@ -641,8 +641,8 @@ useEffect(() => {
                     href="/driver/login"
                     style={{
                       padding: '0.625rem 1.25rem',
-                      color: '#EF7D00',
-                      border: '2px solid #EF7D00',
+                      color: '#659E85',
+                      border: '2px solid #659E85',
                       borderRadius: '0.5rem',
                       fontWeight: '600',
                       textDecoration: 'none',
@@ -655,7 +655,7 @@ useEffect(() => {
                     href="/agent/login"
                     style={{
                       padding: '0.625rem 1.25rem',
-                      background: '#198A00',
+                      background: '#2BB2A9',
                       color: 'white',
                       borderRadius: '0.5rem',
                       fontWeight: '600',
@@ -670,7 +670,7 @@ useEffect(() => {
                     href="/company/login" 
                     style={{
                       padding: '0.625rem 1.25rem',
-                      background: 'linear-gradient(to right, #198A00, #116600)',
+                      background: 'linear-gradient(to right, #2BB2A9, #1F8A83)',
                       color: 'white',
                       borderRadius: '0.5rem',
                       fontWeight: '600',
@@ -695,21 +695,21 @@ useEffect(() => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            background: '#FFE0BF',
+            background: '#D1E8DA',
             padding: '0.5rem 1rem',
             borderRadius: '9999px',
             marginBottom: '1rem'
           }}>
-            <span style={{ fontWeight: 'bold', color: '#198A00' }}>ZM</span>
+            <span style={{ fontWeight: 'bold', color: '#2BB2A9' }}>ZM</span>
             <span style={{ color: '#BD6200', fontWeight: '600' }}>Proudly Zambian</span>
           </div>
           
           <h2 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#1f2937', marginBottom: '1rem' }}>
-            Travel Across <span style={{ color: '#198A00' }}>Zambia</span> with Ease
+            Travel Across <span style={{ color: '#2BB2A9' }}>Zambia</span> with Ease
           </h2>
           
           <p style={{ fontSize: '1.25rem', color: '#4b5563', maxWidth: '48rem', margin: '0 auto' }}>
-            Book intercity bus tickets to over <span style={{ fontWeight: 'bold', color: '#EF7D00' }}>40+ destinations</span> across all 10 provinces
+            Book intercity bus tickets to over <span style={{ fontWeight: 'bold', color: '#659E85' }}>40+ destinations</span> across all 10 provinces
           </p>
         </div>
 
@@ -722,20 +722,20 @@ useEffect(() => {
           maxWidth: '56rem',
           margin: '0 auto 3rem'
         }}>
-          <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#198A00', marginBottom: '1.5rem', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2BB2A9', marginBottom: '1.5rem', textAlign: 'center' }}>
             Search for Buses
           </h3>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
             <div>
-              <label style={{ display: 'block', fontWeight: '600', color: '#198A00', marginBottom: '0.5rem' }}>From</label>
+              <label style={{ display: 'block', fontWeight: '600', color: '#2BB2A9', marginBottom: '0.5rem' }}>From</label>
               <select 
                 value={searchParams.origin}
                 onChange={(e) => setSearchParams({...searchParams, origin: e.target.value})}
                 style={{
                   width: '100%',
                   padding: '0.75rem',
-                  border: '2px solid #198A00',
+                  border: '2px solid #2BB2A9',
                   borderRadius: '0.5rem',
                   fontSize: '1rem',
                   background: 'white'
@@ -748,14 +748,14 @@ useEffect(() => {
             </div>
             
             <div>
-              <label style={{ display: 'block', fontWeight: '600', color: '#198A00', marginBottom: '0.5rem' }}>To</label>
+              <label style={{ display: 'block', fontWeight: '600', color: '#2BB2A9', marginBottom: '0.5rem' }}>To</label>
               <select 
                 value={searchParams.destination}
                 onChange={(e) => setSearchParams({...searchParams, destination: e.target.value})}
                 style={{
                   width: '100%',
                   padding: '0.75rem',
-                  border: '2px solid #198A00',
+                  border: '2px solid #2BB2A9',
                   borderRadius: '0.5rem',
                   fontSize: '1rem',
                   background: 'white'
@@ -769,7 +769,7 @@ useEffect(() => {
             </div>
             
             <div>
-              <label style={{ display: 'block', fontWeight: '600', color: '#198A00', marginBottom: '0.5rem' }}>Date</label>
+              <label style={{ display: 'block', fontWeight: '600', color: '#2BB2A9', marginBottom: '0.5rem' }}>Date</label>
               <input 
                 type="date" 
                 value={searchParams.date}
@@ -777,7 +777,7 @@ useEffect(() => {
                 style={{
                   width: '100%',
                   padding: '0.75rem',
-                  border: '2px solid #198A00',
+                  border: '2px solid #2BB2A9',
                   borderRadius: '0.5rem',
                   fontSize: '1rem'
                 }} 
@@ -792,9 +792,9 @@ useEffect(() => {
             gap: '0.75rem', 
             marginBottom: '1rem',
             padding: '0.75rem 1rem',
-            background: flexibleDateSearch ? '#E8F5E6' : '#f5f5f5',
+            background: flexibleDateSearch ? '#E6F7F6' : '#f5f5f5',
             borderRadius: '0.5rem',
-            border: flexibleDateSearch ? '2px solid #198A00' : '2px solid transparent',
+            border: flexibleDateSearch ? '2px solid #2BB2A9' : '2px solid transparent',
             transition: 'all 0.2s'
           }}>
             <input
@@ -802,7 +802,7 @@ useEffect(() => {
               id="flexibleDate"
               checked={flexibleDateSearch}
               onChange={(e) => setFlexibleDateSearch(e.target.checked)}
-              style={{ width: '1.25rem', height: '1.25rem', accentColor: '#198A00' }}
+              style={{ width: '1.25rem', height: '1.25rem', accentColor: '#2BB2A9' }}
             />
             <label htmlFor="flexibleDate" style={{ color: '#333', fontWeight: '500', cursor: 'pointer', flex: 1 }}>
               Flexible dates (±3 days)
@@ -818,7 +818,7 @@ useEffect(() => {
             style={{
               width: '100%',
               padding: '1rem',
-              background: loading ? '#ccc' : 'linear-gradient(to right, #198A00, #EF7D00)',
+              background: loading ? '#ccc' : 'linear-gradient(to right, #2BB2A9, #659E85)',
               color: 'white',
               fontSize: '1.125rem',
               fontWeight: 'bold',
@@ -862,9 +862,9 @@ useEffect(() => {
                         alignItems: 'center',
                         padding: '0.75rem 1rem',
                         minWidth: '100px',
-                        background: isSelected ? 'linear-gradient(to bottom, #198A00, #116600)' : 'white',
+                        background: isSelected ? 'linear-gradient(to bottom, #2BB2A9, #1F8A83)' : 'white',
                         color: isSelected ? 'white' : '#333',
-                        border: isSelected ? '2px solid #198A00' : '2px solid #ddd',
+                        border: isSelected ? '2px solid #2BB2A9' : '2px solid #ddd',
                         borderRadius: '0.75rem',
                         cursor: 'pointer',
                         transition: 'all 0.2s',
@@ -877,7 +877,7 @@ useEffect(() => {
                           top: '-8px',
                           fontSize: '0.65rem',
                           fontWeight: 'bold',
-                          background: '#EF7D00',
+                          background: '#659E85',
                           color: 'white',
                           padding: '2px 6px',
                           borderRadius: '4px'
@@ -899,7 +899,7 @@ useEffect(() => {
                           fontSize: '0.7rem', 
                           marginTop: '0.25rem',
                           fontWeight: '600',
-                          color: isSelected ? '#FFE0BF' : '#198A00'
+                          color: isSelected ? '#D1E8DA' : '#2BB2A9'
                         }}>
                           {routesOnDate.length} bus{routesOnDate.length > 1 ? 'es' : ''}
                           {minPriceOnDate && <span style={{ display: 'block' }}>from K{minPriceOnDate}</span>}
@@ -935,10 +935,10 @@ useEffect(() => {
                   alignItems: 'center',
                   gap: '0.5rem',
                   padding: '0.5rem 1rem',
-                  background: showFilters ? '#E8F5E6' : 'white',
-                  border: '2px solid #198A00',
+                  background: showFilters ? '#E6F7F6' : 'white',
+                  border: '2px solid #2BB2A9',
                   borderRadius: '0.5rem',
-                  color: '#198A00',
+                  color: '#2BB2A9',
                   fontWeight: '600',
                   cursor: 'pointer',
                   transition: 'all 0.2s'
@@ -949,7 +949,7 @@ useEffect(() => {
                 </svg>
                 Filters {(filters.busType || filters.priceMin || filters.priceMax || filters.timeOfDay || filters.amenities.length > 0) && (
                   <span style={{
-                    background: '#EF7D00',
+                    background: '#659E85',
                     color: 'white',
                     borderRadius: '50%',
                     width: '1.25rem',
@@ -1056,13 +1056,13 @@ useEffect(() => {
                           alignItems: 'center',
                           gap: '0.25rem',
                           padding: '0.375rem 0.75rem',
-                          background: filters.amenities.includes(amenity.id) ? '#E8F5E6' : 'white',
-                          border: filters.amenities.includes(amenity.id) ? '2px solid #198A00' : '1px solid #ddd',
+                          background: filters.amenities.includes(amenity.id) ? '#E6F7F6' : 'white',
+                          border: filters.amenities.includes(amenity.id) ? '2px solid #2BB2A9' : '1px solid #ddd',
                           borderRadius: '9999px',
                           fontSize: '0.8rem',
                           cursor: 'pointer',
                           transition: 'all 0.2s',
-                          color: filters.amenities.includes(amenity.id) ? '#198A00' : '#666',
+                          color: filters.amenities.includes(amenity.id) ? '#2BB2A9' : '#666',
                           fontWeight: filters.amenities.includes(amenity.id) ? '600' : '400'
                         }}
                       >
@@ -1100,7 +1100,7 @@ useEffect(() => {
         {/* Search Results */}
         {routes.length > 0 && (
           <div>
-            <h3 style={{ fontSize: '1.875rem', fontWeight: 'bold', color: '#198A00', marginBottom: '1.5rem', textAlign: 'center' }}>
+            <h3 style={{ fontSize: '1.875rem', fontWeight: 'bold', color: '#2BB2A9', marginBottom: '1.5rem', textAlign: 'center' }}>
               Available Buses ({filteredRoutes.length} of {routes.length} routes)
             </h3>
             
@@ -1110,7 +1110,7 @@ useEffect(() => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <p style={{ color: '#666', fontSize: '1.125rem' }}>No buses match your filters.</p>
-                <button onClick={clearFilters} style={{ marginTop: '1rem', padding: '0.5rem 1rem', background: '#198A00', color: 'white', border: 'none', borderRadius: '0.5rem', cursor: 'pointer' }}>
+                <button onClick={clearFilters} style={{ marginTop: '1rem', padding: '0.5rem 1rem', background: '#2BB2A9', color: 'white', border: 'none', borderRadius: '0.5rem', cursor: 'pointer' }}>
                   Clear Filters
                 </button>
               </div>
@@ -1128,7 +1128,7 @@ useEffect(() => {
                     padding: '1.5rem',
                     borderRadius: '1rem',
                     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                    border: '2px solid #E8F5E6',
+                    border: '2px solid #E6F7F6',
                     transition: 'all 0.3s',
                     position: 'relative'
                   }}
@@ -1148,8 +1148,8 @@ useEffect(() => {
                           key={idx}
                           style={{
                             padding: '0.25rem 0.75rem',
-                            background: badge === 'Lowest Price' ? '#EF7D00' 
-                              : badge === 'Most Seats' ? '#198A00'
+                            background: badge === 'Lowest Price' ? '#659E85' 
+                              : badge === 'Most Seats' ? '#2BB2A9'
                               : badge === 'VIP Coach' ? '#7c3aed'
                               : badge === 'Express' ? '#0891b2'
                               : '#666',
@@ -1195,17 +1195,17 @@ useEffect(() => {
                           <img 
                             src={route.company_logo_url} 
                             alt={route.company_name}
-                            style={{ width: '2.5rem', height: '2.5rem', borderRadius: '0.5rem', objectFit: 'cover', border: '2px solid #E8F5E6' }}
+                            style={{ width: '2.5rem', height: '2.5rem', borderRadius: '0.5rem', objectFit: 'cover', border: '2px solid #E6F7F6' }}
                           />
                         ) : (
-                          <div style={{ width: '2.5rem', height: '2.5rem', borderRadius: '0.5rem', background: '#E8F5E6', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <svg style={{ width: '1.5rem', height: '1.5rem', color: '#198A00' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <div style={{ width: '2.5rem', height: '2.5rem', borderRadius: '0.5rem', background: '#E6F7F6', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <svg style={{ width: '1.5rem', height: '1.5rem', color: '#2BB2A9' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8m-8 4h8m-4 4v3m-6-3h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm0 0v3a1 1 0 001 1h2m8-4v3a1 1 0 01-1 1h-2" />
                             </svg>
                           </div>
                         )}
                         <div>
-                          <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#198A00' }}>
+                          <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#2BB2A9' }}>
                             {route.company_name}
                           </h4>
                           <p style={{ fontSize: '0.875rem', color: '#666' }}>
@@ -1221,14 +1221,14 @@ useEffect(() => {
                                 if (!stats.avg) return <span style={{ color: '#666', fontSize: '0.875rem' }}>No reviews yet</span>;
                                 return (
                                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                    <span style={{ fontWeight: 'bold', color: '#EF7D00', fontSize: '1rem' }}>★ {stats.avg}</span>
+                                    <span style={{ fontWeight: 'bold', color: '#659E85', fontSize: '1rem' }}>★ {stats.avg}</span>
                                     <button
                                       style={{
                                         padding: '0.25rem 0.75rem',
-                                        background: '#E8F5E6',
-                                        color: '#198A00',
+                                        background: '#E6F7F6',
+                                        color: '#2BB2A9',
                                         borderRadius: '9999px',
-                                        border: '1px solid #198A00',
+                                        border: '1px solid #2BB2A9',
                                         fontSize: '0.8rem',
                                         cursor: 'pointer',
                                         fontWeight: '600'
@@ -1254,13 +1254,13 @@ useEffect(() => {
                         <div>
                           <p style={{ fontSize: '0.875rem', color: '#666' }}>From</p>
                           <p style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#1f2937' }}>{route.origin}</p>
-                          <p style={{ fontSize: '0.875rem', color: '#EF7D00', fontWeight: '600' }}>{formatTime(route.departure_time)}</p>
+                          <p style={{ fontSize: '0.875rem', color: '#659E85', fontWeight: '600' }}>{formatTime(route.departure_time)}</p>
                         </div>
-                        <div style={{ fontSize: '1.5rem', color: '#198A00' }}>→</div>
+                        <div style={{ fontSize: '1.5rem', color: '#2BB2A9' }}>→</div>
                         <div>
                           <p style={{ fontSize: '0.875rem', color: '#666' }}>To</p>
                           <p style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#1f2937' }}>{route.destination}</p>
-                          <p style={{ fontSize: '0.875rem', color: '#EF7D00', fontWeight: '600' }}>{formatTime(route.arrival_time)}</p>
+                          <p style={{ fontSize: '0.875rem', color: '#659E85', fontWeight: '600' }}>{formatTime(route.arrival_time)}</p>
                         </div>
                       </div>
                       
@@ -1270,8 +1270,8 @@ useEffect(() => {
                             key={idx}
                             style={{
                               padding: '0.25rem 0.75rem',
-                              background: '#E8F5E6',
-                              color: '#198A00',
+                              background: '#E6F7F6',
+                              color: '#2BB2A9',
                               borderRadius: '9999px',
                               fontSize: '0.875rem',
                               fontWeight: '500'
@@ -1370,7 +1370,7 @@ useEffect(() => {
                         </div>
                       )}
                       <p style={{ fontSize: '0.875rem', color: '#666', marginBottom: '0.25rem' }}>Price</p>
-                      <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#EF7D00', marginBottom: '1rem' }}>
+                      <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#659E85', marginBottom: '1rem' }}>
                         K{route.price}
                       </p>
                       <Link
@@ -1379,7 +1379,7 @@ useEffect(() => {
                           display: 'inline-block',
                           padding: '0.75rem 1.5rem',
                           background: route.available_seats > 0 
-                            ? 'linear-gradient(to right, #198A00, #EF7D00)' 
+                            ? 'linear-gradient(to right, #2BB2A9, #659E85)' 
                             : '#ccc',
                           color: 'white',
                           fontWeight: 'bold',
@@ -1409,8 +1409,8 @@ useEffect(() => {
             textAlign: 'center',
             boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
           }}>
-            <div style={{ fontSize: '2rem', marginBottom: '1rem', color: '#198A00', fontWeight: 'bold' }}>?</div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#198A00', marginBottom: '0.5rem' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '1rem', color: '#2BB2A9', fontWeight: 'bold' }}>?</div>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2BB2A9', marginBottom: '0.5rem' }}>
               No routes found
             </h3>
             <p style={{ color: '#666' }}>
@@ -1421,25 +1421,25 @@ useEffect(() => {
       </section>
 
       {/* Features Section */}
-      <section style={{ background: 'white', padding: '3rem 1rem', borderTop: '4px solid #198A00' }}>
+      <section style={{ background: 'white', padding: '3rem 1rem', borderTop: '4px solid #2BB2A9' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h3 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', color: '#198A00', marginBottom: '2rem' }}>
+          <h3 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', color: '#2BB2A9', marginBottom: '2rem' }}>
             Why Choose VayaZed Bus Booking?
           </h3>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
             <div style={{ 
-              background: 'linear-gradient(135deg, #E8F5E6, white)',
+              background: 'linear-gradient(135deg, #E6F7F6, white)',
               padding: '2rem',
               borderRadius: '1rem',
-              border: '2px solid #198A00',
+              border: '2px solid #2BB2A9',
               textAlign: 'center',
               transition: 'transform 0.3s'
             }}>
-              <svg style={{ width: '3rem', height: '3rem', color: '#198A00', margin: '0 auto 1rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg style={{ width: '3rem', height: '3rem', color: '#2BB2A9', margin: '0 auto 1rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
               </svg>
-              <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#198A00', marginBottom: '0.5rem' }}>
+              <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#2BB2A9', marginBottom: '0.5rem' }}>
                 40+ Cities
               </h4>
               <p style={{ color: '#4b5563' }}>
@@ -1448,17 +1448,17 @@ useEffect(() => {
             </div>
             
             <div style={{ 
-              background: 'linear-gradient(135deg, #FFF3E6, white)',
+              background: 'linear-gradient(135deg, #E8F3EC, white)',
               padding: '2rem',
               borderRadius: '1rem',
-              border: '2px solid #EF7D00',
+              border: '2px solid #659E85',
               textAlign: 'center',
               transition: 'transform 0.3s'
             }}>
-              <svg style={{ width: '3rem', height: '3rem', color: '#EF7D00', margin: '0 auto 1rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg style={{ width: '3rem', height: '3rem', color: '#659E85', margin: '0 auto 1rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
               </svg>
-              <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#EF7D00', marginBottom: '0.5rem' }}>
+              <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#659E85', marginBottom: '0.5rem' }}>
                 Easy Payment
               </h4>
               <p style={{ color: '#4b5563' }}>
@@ -1467,17 +1467,17 @@ useEffect(() => {
             </div>
             
             <div style={{ 
-              background: 'linear-gradient(135deg, #FEE9E7, white)',
+              background: 'linear-gradient(135deg, #E6F5F4, white)',
               padding: '2rem',
               borderRadius: '1rem',
-              border: '2px solid #DE2010',
+              border: '2px solid #1A8A82',
               textAlign: 'center',
               transition: 'transform 0.3s'
             }}>
-              <svg style={{ width: '3rem', height: '3rem', color: '#DE2010', margin: '0 auto 1rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg style={{ width: '3rem', height: '3rem', color: '#1A8A82', margin: '0 auto 1rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#DE2010', marginBottom: '0.5rem' }}>
+              <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1A8A82', marginBottom: '0.5rem' }}>
                 Instant Booking
               </h4>
               <p style={{ color: '#4b5563' }}>
@@ -1489,7 +1489,7 @@ useEffect(() => {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: '#198A00', color: 'white', padding: '2rem 1rem', textAlign: 'center' }}>
+      <footer style={{ background: '#2BB2A9', color: 'white', padding: '2rem 1rem', textAlign: 'center' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <p style={{ fontSize: '1.125rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
             VayaZed Bus Booking System
@@ -1540,7 +1540,7 @@ useEffect(() => {
           right: '1rem',
           background: 'none',
           border: 'none',
-          color: '#EF7D00',
+          color: '#659E85',
           fontSize: '1.5rem',
           cursor: 'pointer',
           fontWeight: 'bold',
@@ -1556,7 +1556,7 @@ useEffect(() => {
         ×
       </button>
       
-      <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#198A00', marginBottom: '1rem' }}>
+      <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#2BB2A9', marginBottom: '1rem' }}>
         Reviews for {reviewPopupCompany}
       </h3>
       
@@ -1580,15 +1580,15 @@ useEffect(() => {
             const stats = getCompanyReviewStats(reviewPopupCompany, companyReviews);
             return (
               <div style={{
-                background: 'linear-gradient(135deg, #E8F5E6, white)',
+                background: 'linear-gradient(135deg, #E6F7F6, white)',
                 padding: '1rem',
                 borderRadius: '0.75rem',
                 marginBottom: '1.5rem',
-                border: '2px solid #198A00'
+                border: '2px solid #2BB2A9'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
                   <div style={{ textAlign: 'center' }}>
-                    <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#EF7D00' }}>
+                    <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#659E85' }}>
                       {stats.avg}
                     </span>
                     <span style={{ fontSize: '1rem', color: '#666' }}> /5</span>
@@ -1658,17 +1658,17 @@ useEffect(() => {
                   flexWrap: 'wrap'
                 }}>
                   <span style={{ 
-                    color: '#EF7D00', 
+                    color: '#659E85', 
                     fontWeight: 'bold', 
                     fontSize: '1.1rem',
-                    background: '#FFF3E6',
+                    background: '#E8F3EC',
                     padding: '0.25rem 0.75rem',
                     borderRadius: '9999px'
                   }}>
                     ★ {review.rating}
                   </span>
                   <span style={{ 
-                    color: '#198A00', 
+                    color: '#2BB2A9', 
                     fontWeight: '600', 
                     fontSize: '0.95rem' 
                   }}>
@@ -1889,7 +1889,7 @@ useEffect(() => {
                     objectFit: 'cover',
                     borderRadius: '0.25rem',
                     cursor: 'pointer',
-                    border: idx === galleryIndex ? '2px solid #EF7D00' : '2px solid transparent',
+                    border: idx === galleryIndex ? '2px solid #659E85' : '2px solid transparent',
                     opacity: idx === galleryIndex ? 1 : 0.6,
                     transition: 'all 0.2s'
                   }}

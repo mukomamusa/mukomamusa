@@ -494,19 +494,19 @@ export default function DashboardPage() {
   if (!user) return null;
 
 return (
-  <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+  <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
     {/* Header - Zambian Theme */}
-    <header style={{ background: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #198A00', position: 'sticky', top: 0, zIndex: 1000 }}>
+    <header style={{ background: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #2BB2A9', position: 'sticky', top: 0, zIndex: 1000 }}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center space-x-2">
             <img
               src="/logo.jpg"
               alt="VayaZed Logo"
-              style={{ width: '52px', height: '52px', objectFit: 'cover', objectPosition: 'center', borderRadius: '0.75rem', background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)', border: '2px solid #198A00', boxShadow: '0 5px 12px rgba(0,0,0,0.18)' }}
+              style={{ width: '52px', height: '52px', objectFit: 'cover', objectPosition: 'center', borderRadius: '0.75rem', background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)', border: '2px solid #2BB2A9', boxShadow: '0 5px 12px rgba(0,0,0,0.18)' }}
             />
             <div>
-              <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', background: 'linear-gradient(to right, #198A00, #EF7D00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>VayaZed Bus Booking</h1>
+              <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', background: 'linear-gradient(to right, #2BB2A9, #659E85)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>VayaZed Bus Booking</h1>
               <p className="text-sm text-gray-600">Customer Dashboard</p>
             </div>
           </Link>

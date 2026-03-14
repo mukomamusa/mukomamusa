@@ -63,12 +63,12 @@ export default function DriverLogin() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       {/* Header with VayaZed branding */}
       <header style={{ 
         background: 'white', 
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-        borderBottom: '4px solid #198A00'
+        borderBottom: '4px solid #2BB2A9'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '1rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -82,8 +82,8 @@ export default function DriverLogin() {
                   objectFit: 'cover',
                   objectPosition: 'center',
                   borderRadius: '0.75rem',
-                  background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)',
-                  border: '2px solid #198A00',
+                  background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)',
+                  border: '2px solid #2BB2A9',
                   boxShadow: '0 6px 14px rgba(0, 0, 0, 0.2)'
                 }}
               />
@@ -91,7 +91,7 @@ export default function DriverLogin() {
                 <h1 style={{ 
                   fontSize: '1.5rem', 
                   fontWeight: 'bold',
-                  background: 'linear-gradient(to right, #198A00, #EF7D00)',
+                  background: 'linear-gradient(to right, #2BB2A9, #659E85)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
                 }}>
@@ -111,14 +111,14 @@ export default function DriverLogin() {
           borderRadius: '1rem',
           boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
           padding: '2rem',
-          border: '2px solid #E8F5E6'
+          border: '2px solid #E6F7F6'
         }}>
           {/* Zambian flag indicator */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            background: '#FFE0BF',
+            background: '#D1E8DA',
             padding: '0.25rem 0.75rem',
             borderRadius: '9999px',
             marginBottom: '1.5rem'
@@ -139,9 +139,9 @@ export default function DriverLogin() {
               marginBottom: '1rem',
               padding: '0.75rem',
               borderRadius: '0.5rem',
-              backgroundColor: '#FEE9E7',
-              border: '1px solid #DE2010',
-              color: '#DE2010'
+              backgroundColor: '#E6F5F4',
+              border: '1px solid #1A8A82',
+              color: '#1A8A82'
             }}>
               {error}
             </div>
@@ -153,7 +153,7 @@ export default function DriverLogin() {
                 display: 'block', 
                 fontSize: '0.875rem', 
                 fontWeight: '600', 
-                color: '#198A00', 
+                color: '#2BB2A9', 
                 marginBottom: '0.5rem' 
               }}>
                 {loginMethod === 'email' ? 'Email Address' : 'Phone Number'}
@@ -169,12 +169,12 @@ export default function DriverLogin() {
                     padding: '0.75rem 1rem',
                     paddingRight: '6rem',
                     border: username && !validateInput() 
-                      ? '2px solid #DE2010' 
-                      : '2px solid #198A00',
+                      ? '2px solid #1A8A82' 
+                      : '2px solid #2BB2A9',
                     borderRadius: '0.5rem',
                     fontSize: '1rem',
                     outline: 'none',
-                    backgroundColor: username && !validateInput() ? '#FEE9E7' : 'white'
+                    backgroundColor: username && !validateInput() ? '#E6F5F4' : 'white'
                   }}
                   placeholder={loginMethod === 'email' 
                     ? 'driver@company.com' 
@@ -190,9 +190,9 @@ export default function DriverLogin() {
                     top: '50%',
                     transform: 'translateY(-50%)',
                     padding: '0.25rem 0.75rem',
-                    background: '#E8F5E6',
-                    color: '#198A00',
-                    border: '1px solid #198A00',
+                    background: '#E6F7F6',
+                    color: '#2BB2A9',
+                    border: '1px solid #2BB2A9',
                     borderRadius: '0.375rem',
                     fontSize: '0.75rem',
                     fontWeight: '600',
@@ -203,7 +203,7 @@ export default function DriverLogin() {
                 </button>
               </div>
               {username && !validateInput() && (
-                <p style={{ fontSize: '0.75rem', color: '#DE2010', marginTop: '0.25rem' }}>
+                <p style={{ fontSize: '0.75rem', color: '#1A8A82', marginTop: '0.25rem' }}>
                   {loginMethod === 'email' 
                     ? 'Please enter a valid email address' 
                     : 'Please enter a valid Zambian phone number'}
@@ -216,7 +216,7 @@ export default function DriverLogin() {
                 display: 'block', 
                 fontSize: '0.875rem', 
                 fontWeight: '600', 
-                color: '#198A00', 
+                color: '#2BB2A9', 
                 marginBottom: '0.5rem' 
               }}>
                 Password
@@ -229,7 +229,7 @@ export default function DriverLogin() {
                 style={{
                   width: '100%',
                   padding: '0.75rem 1rem',
-                  border: '2px solid #198A00',
+                  border: '2px solid #2BB2A9',
                   borderRadius: '0.5rem',
                   fontSize: '1rem',
                   outline: 'none'
@@ -246,7 +246,7 @@ export default function DriverLogin() {
                 padding: '0.875rem',
                 background: loading || !validateInput() 
                   ? '#9CA3AF' 
-                  : 'linear-gradient(to right, #198A00, #EF7D00)',
+                  : 'linear-gradient(to right, #2BB2A9, #659E85)',
                 color: 'white',
                 fontSize: '1rem',
                 fontWeight: '600',
@@ -265,14 +265,14 @@ export default function DriverLogin() {
           <div style={{
             marginTop: '2rem',
             padding: '1rem',
-            background: '#E8F5E6',
+            background: '#E6F7F6',
             borderRadius: '0.5rem',
-            border: '2px dashed #198A00'
+            border: '2px dashed #2BB2A9'
           }}>
             <p style={{ 
               fontSize: '0.875rem', 
               fontWeight: '600', 
-              color: '#198A00', 
+              color: '#2BB2A9', 
               marginBottom: '0.5rem',
               display: 'flex',
               alignItems: 'center',
@@ -281,9 +281,9 @@ export default function DriverLogin() {
               <span>🚌</span> Demo Driver Credentials
             </p>
             <div style={{ fontSize: '0.875rem', color: '#374151', space: '0.25rem 0' }}>
-              <p><span style={{ color: '#EF7D00', fontWeight: '600' }}>Email:</span> john.kabuya@mazhindubusservices.vayazed.com</p>
-              <p><span style={{ color: '#EF7D00', fontWeight: '600' }}>Phone:</span> +260713098977</p>
-              <p><span style={{ color: '#EF7D00', fontWeight: '600' }}>Password:</span> driver123</p>
+              <p><span style={{ color: '#659E85', fontWeight: '600' }}>Email:</span> john.kabuya@mazhindubusservices.vayazed.com</p>
+              <p><span style={{ color: '#659E85', fontWeight: '600' }}>Phone:</span> +260713098977</p>
+              <p><span style={{ color: '#659E85', fontWeight: '600' }}>Password:</span> driver123</p>
             </div>
           </div>
 
@@ -311,9 +311,9 @@ export default function DriverLogin() {
           justifyContent: 'center',
           gap: '0.5rem'
         }}>
-          <div style={{ width: '2rem', height: '0.25rem', background: '#198A00', borderRadius: '9999px' }}></div>
-          <div style={{ width: '2rem', height: '0.25rem', background: '#EF7D00', borderRadius: '9999px' }}></div>
-          <div style={{ width: '2rem', height: '0.25rem', background: '#DE2010', borderRadius: '9999px' }}></div>
+          <div style={{ width: '2rem', height: '0.25rem', background: '#2BB2A9', borderRadius: '9999px' }}></div>
+          <div style={{ width: '2rem', height: '0.25rem', background: '#659E85', borderRadius: '9999px' }}></div>
+          <div style={{ width: '2rem', height: '0.25rem', background: '#1A8A82', borderRadius: '9999px' }}></div>
         </div>
       </div>
     </div>

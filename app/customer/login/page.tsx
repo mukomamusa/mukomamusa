@@ -6,7 +6,7 @@ export default function LoginPage() {
     <Suspense fallback={
       <div style={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #198A00 0%, #EF7D00 50%, #DE2010 100%)',
+        background: 'linear-gradient(135deg, #2BB2A9 0%, #659E85 50%, #1A8A82 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -26,7 +26,7 @@ export default function LoginPage() {
             <div style={{
               width: '3rem',
               height: '3rem',
-              border: '3px solid #198A00',
+              border: '3px solid #2BB2A9',
               borderTopColor: 'transparent',
               borderRadius: '50%',
               animation: 'spin 1s linear infinite',

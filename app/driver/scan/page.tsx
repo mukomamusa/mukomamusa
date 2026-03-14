@@ -167,12 +167,12 @@ export default function QRScanner() {
 };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       {/* Header */}
       <header style={{ 
         background: 'white', 
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-        borderBottom: '4px solid #198A00',
+        borderBottom: '4px solid #2BB2A9',
         position: 'sticky',
         top: 0,
         zIndex: 1000
@@ -185,7 +185,7 @@ export default function QRScanner() {
                 display: 'flex', 
                 alignItems: 'center', 
                 gap: '0.5rem',
-                color: '#198A00',
+                color: '#2BB2A9',
                 textDecoration: 'none'
               }}
             >
@@ -205,7 +205,7 @@ export default function QRScanner() {
           background: 'white',
           borderRadius: '1rem',
           padding: '1.5rem',
-          border: '2px solid #E8F5E6',
+          border: '2px solid #E6F7F6',
           boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
         }}>
           {/* Zambian flag indicator */}
@@ -213,7 +213,7 @@ export default function QRScanner() {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            background: '#FFE0BF',
+            background: '#D1E8DA',
             padding: '0.25rem 0.75rem',
             borderRadius: '9999px',
             marginBottom: '1.5rem'
@@ -231,15 +231,15 @@ export default function QRScanner() {
   <div style={{
     marginTop: '1rem',
     padding: '1.5rem',
-    background: '#E8F5E6',
+    background: '#E6F7F6',
     borderRadius: '0.75rem',
-    border: '2px solid #198A00'
+    border: '2px solid #2BB2A9'
   }}>
     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
       <div style={{
         width: '3rem',
         height: '3rem',
-        background: '#198A00',
+        background: '#2BB2A9',
         borderRadius: '50%',
         display: 'flex',
         alignItems: 'center',
@@ -250,7 +250,7 @@ export default function QRScanner() {
         ✓
       </div>
       <div>
-        <p style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#198A00' }}>{message.text}</p>
+        <p style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#2BB2A9' }}>{message.text}</p>
         <p style={{ fontSize: '0.875rem', color: '#666' }}>Boarded at {formatTime()}</p>
       </div>
     </div>
@@ -273,7 +273,7 @@ export default function QRScanner() {
               {p.name}
             </p>
             <p style={{ fontSize: '0.875rem', color: '#666' }}>
-              Seat: <span style={{ fontWeight: '600', color: '#198A00' }}>{p.seat || 'Not assigned'}</span>
+              Seat: <span style={{ fontWeight: '600', color: '#2BB2A9' }}>{p.seat || 'Not assigned'}</span>
             </p>
           </div>
         ))}
@@ -287,10 +287,10 @@ export default function QRScanner() {
             <div style={{
               marginTop: '1rem',
               padding: '1rem',
-              background: '#FEE9E7',
+              background: '#E6F5F4',
               borderRadius: '0.5rem',
-              border: '1px solid #DE2010',
-              color: '#DE2010',
+              border: '1px solid #1A8A82',
+              color: '#1A8A82',
               display: 'flex',
               alignItems: 'center',
               gap: '0.5rem'
@@ -305,7 +305,7 @@ export default function QRScanner() {
             <div style={{
               marginTop: '1rem',
               padding: '1rem',
-              background: '#FFF3E6',
+              background: '#E8F3EC',
               borderRadius: '0.5rem',
               display: 'flex',
               alignItems: 'center',
@@ -315,12 +315,12 @@ export default function QRScanner() {
               <div style={{ 
                 width: '1.25rem', 
                 height: '1.25rem', 
-                border: '2px solid #EF7D00',
+                border: '2px solid #659E85',
                 borderTopColor: 'transparent',
                 borderRadius: '50%',
                 animation: 'spin 1s linear infinite'
               }}></div>
-              <span style={{ color: '#EF7D00' }}>Processing...</span>
+              <span style={{ color: '#659E85' }}>Processing...</span>
             </div>
           )}
 
@@ -329,12 +329,12 @@ export default function QRScanner() {
             <div style={{
               marginTop: '1rem',
               padding: '0.75rem',
-              background: '#E8F5E6',
+              background: '#E6F7F6',
               borderRadius: '0.5rem',
               fontSize: '0.75rem',
               wordBreak: 'break-all'
             }}>
-              <p style={{ fontWeight: '600', color: '#198A00', marginBottom: '0.25rem' }}>Raw Scan Data:</p>
+              <p style={{ fontWeight: '600', color: '#2BB2A9', marginBottom: '0.25rem' }}>Raw Scan Data:</p>
               <p style={{ color: '#666' }}>{scanResult}</p>
             </div>
           )}
@@ -346,17 +346,17 @@ export default function QRScanner() {
               style={{
                 flex: 1,
                 padding: '0.75rem',
-                background: '#E8F5E6',
-                color: '#198A00',
-                border: '2px solid #198A00',
+                background: '#E6F7F6',
+                color: '#2BB2A9',
+                border: '2px solid #2BB2A9',
                 borderRadius: '0.5rem',
                 fontSize: '0.875rem',
                 fontWeight: '600',
                 cursor: 'pointer',
                 transition: 'all 0.2s'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.background = '#198A00'}
-              onMouseLeave={(e) => e.currentTarget.style.background = '#E8F5E6'}
+              onMouseEnter={(e) => e.currentTarget.style.background = '#2BB2A9'}
+              onMouseLeave={(e) => e.currentTarget.style.background = '#E6F7F6'}
             >
               Scan Another
             </button>
@@ -385,11 +385,11 @@ export default function QRScanner() {
           <div style={{
             marginTop: '1.5rem',
             padding: '1rem',
-            background: '#E8F5E6',
+            background: '#E6F7F6',
             borderRadius: '0.5rem',
-            border: '1px dashed #198A00'
+            border: '1px dashed #2BB2A9'
           }}>
-            <h3 style={{ fontWeight: '600', color: '#198A00', marginBottom: '0.5rem', fontSize: '0.875rem' }}>
+            <h3 style={{ fontWeight: '600', color: '#2BB2A9', marginBottom: '0.5rem', fontSize: '0.875rem' }}>
               📋 Instructions
             </h3>
             <ul style={{ fontSize: '0.75rem', color: '#666', listStyle: 'none', padding: 0, margin: 0 }}>

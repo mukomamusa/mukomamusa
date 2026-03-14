@@ -244,7 +244,7 @@ export default function AgentDashboard() {
     <div style={{ minHeight: '100vh', background: '#F3F4F6' }}>
       {/* Header */}
       <header style={{ 
-        background: 'linear-gradient(to right, #198A00, #116600)', 
+        background: 'linear-gradient(to right, #2BB2A9, #1F8A83)', 
         color: 'white',
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
       }}>
@@ -302,7 +302,7 @@ export default function AgentDashboard() {
                 onClick={handleLogout}
                 style={{
                   padding: '0.5rem 1rem',
-                  background: '#DE2010',
+                  background: '#1A8A82',
                   color: 'white',
                   border: 'none',
                   borderRadius: '0.375rem',
@@ -331,10 +331,10 @@ export default function AgentDashboard() {
                 onClick={() => setActiveTab(tab.id as any)}
                 style={{
                   padding: '1rem 1.5rem',
-                  background: activeTab === tab.id ? '#E8F5E6' : 'transparent',
+                  background: activeTab === tab.id ? '#E6F7F6' : 'transparent',
                   border: 'none',
-                  borderBottom: activeTab === tab.id ? '3px solid #198A00' : '3px solid transparent',
-                  color: activeTab === tab.id ? '#198A00' : '#6B7280',
+                  borderBottom: activeTab === tab.id ? '3px solid #2BB2A9' : '3px solid transparent',
+                  color: activeTab === tab.id ? '#2BB2A9' : '#6B7280',
                   fontWeight: activeTab === tab.id ? '600' : '500',
                   cursor: 'pointer',
                   display: 'flex',
@@ -397,7 +397,7 @@ export default function AgentDashboard() {
                   disabled={searching}
                   style={{
                     padding: '0.75rem',
-                    background: searching ? '#9CA3AF' : '#198A00',
+                    background: searching ? '#9CA3AF' : '#2BB2A9',
                     color: 'white',
                     border: 'none',
                     borderRadius: '0.5rem',
@@ -422,11 +422,11 @@ export default function AgentDashboard() {
                       }}
                       style={{
                         padding: '0.75rem',
-                        border: selectedRoute?.id === route.id ? '2px solid #198A00' : '1px solid #E5E7EB',
+                        border: selectedRoute?.id === route.id ? '2px solid #2BB2A9' : '1px solid #E5E7EB',
                         borderRadius: '0.5rem',
                         marginBottom: '0.5rem',
                         cursor: 'pointer',
-                        background: selectedRoute?.id === route.id ? '#E8F5E6' : 'white'
+                        background: selectedRoute?.id === route.id ? '#E6F7F6' : 'white'
                       }}
                     >
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -435,8 +435,8 @@ export default function AgentDashboard() {
                           <p style={{ fontSize: '0.75rem', color: '#6B7280' }}>{route.date} at {route.departure_time}</p>
                         </div>
                         <div style={{ textAlign: 'right' }}>
-                          <p style={{ fontWeight: 'bold', color: '#198A00' }}>K{route.price}</p>
-                          <p style={{ fontSize: '0.75rem', color: route.available_seats > 5 ? '#198A00' : '#DE2010' }}>
+                          <p style={{ fontWeight: 'bold', color: '#2BB2A9' }}>K{route.price}</p>
+                          <p style={{ fontSize: '0.75rem', color: route.available_seats > 5 ? '#2BB2A9' : '#1A8A82' }}>
                             {route.available_seats} seats
                           </p>
                         </div>
@@ -457,7 +457,7 @@ export default function AgentDashboard() {
               
               {selectedRoute ? (
                 <>
-                  <div style={{ background: '#E8F5E6', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem' }}>
+                  <div style={{ background: '#E6F7F6', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem' }}>
                     <p style={{ fontWeight: '600' }}>{selectedRoute.origin} → {selectedRoute.destination}</p>
                     <p style={{ fontSize: '0.875rem', color: '#6B7280' }}>{selectedRoute.date} • {selectedRoute.departure_time}</p>
                     <p style={{ fontSize: '0.875rem', color: '#6B7280' }}>{selectedRoute.company_name} • Bus: {selectedRoute.bus_number}</p>
@@ -521,7 +521,7 @@ export default function AgentDashboard() {
                   </div>
 
                   {/* Commission info */}
-                  <div style={{ background: '#FFF3E6', padding: '0.75rem', borderRadius: '0.5rem', marginBottom: '1rem', fontSize: '0.875rem' }}>
+                  <div style={{ background: '#E8F3EC', padding: '0.75rem', borderRadius: '0.5rem', marginBottom: '1rem', fontSize: '0.875rem' }}>
                     <p>Your Commission: <strong>K{((selectedRoute.price * numSeats) * (agent?.commission_rate || 7.5) / 100).toFixed(2)}</strong></p>
                     <p style={{ color: '#6B7280', fontSize: '0.75rem' }}>({agent?.commission_rate}% of booking value)</p>
                   </div>
@@ -532,7 +532,7 @@ export default function AgentDashboard() {
                     style={{
                       width: '100%',
                       padding: '0.75rem',
-                      background: bookingLoading ? '#9CA3AF' : '#EF7D00',
+                      background: bookingLoading ? '#9CA3AF' : '#659E85',
                       color: 'white',
                       border: 'none',
                       borderRadius: '0.5rem',
@@ -554,11 +554,11 @@ export default function AgentDashboard() {
                 <div style={{ 
                   marginTop: '1rem', 
                   padding: '1rem', 
-                  background: '#E8F5E6', 
-                  border: '1px solid #198A00', 
+                  background: '#E6F7F6', 
+                  border: '1px solid #2BB2A9', 
                   borderRadius: '0.5rem' 
                 }}>
-                  <h3 style={{ fontWeight: '600', color: '#198A00', marginBottom: '0.5rem' }}>✓ Booking Successful!</h3>
+                  <h3 style={{ fontWeight: '600', color: '#2BB2A9', marginBottom: '0.5rem' }}>✓ Booking Successful!</h3>
                   <p style={{ fontSize: '0.875rem' }}>Reference: <strong>{bookingResult.bookingRef}</strong></p>
                   <p style={{ fontSize: '0.875rem' }}>Total: K{bookingResult.total_price}</p>
                   <p style={{ fontSize: '0.875rem' }}>Your Commission: K{bookingResult.commission?.toFixed(2)}</p>
@@ -570,7 +570,7 @@ export default function AgentDashboard() {
                     style={{
                       marginTop: '0.75rem',
                       padding: '0.5rem 1rem',
-                      background: '#198A00',
+                      background: '#2BB2A9',
                       color: 'white',
                       border: 'none',
                       borderRadius: '0.375rem',
@@ -593,7 +593,7 @@ export default function AgentDashboard() {
               <h2 style={{ fontSize: '1.125rem', fontWeight: '600' }}>📊 Sales History</h2>
               <div style={{ textAlign: 'right' }}>
                 <p style={{ fontSize: '0.875rem', color: '#6B7280' }}>Total Earnings</p>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#198A00' }}>K{calculateTotalEarnings().toFixed(2)}</p>
+                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2BB2A9' }}>K{calculateTotalEarnings().toFixed(2)}</p>
               </div>
             </div>
 
@@ -620,14 +620,14 @@ export default function AgentDashboard() {
                       <td style={{ padding: '0.75rem', fontSize: '0.875rem' }}>{booking.date}</td>
                       <td style={{ padding: '0.75rem', fontSize: '0.875rem', textAlign: 'right' }}>{booking.num_seats}</td>
                       <td style={{ padding: '0.75rem', fontSize: '0.875rem', textAlign: 'right' }}>K{booking.total_price}</td>
-                      <td style={{ padding: '0.75rem', fontSize: '0.875rem', textAlign: 'right', color: '#198A00' }}>K{booking.agent_commission?.toFixed(2) || '0.00'}</td>
+                      <td style={{ padding: '0.75rem', fontSize: '0.875rem', textAlign: 'right', color: '#2BB2A9' }}>K{booking.agent_commission?.toFixed(2) || '0.00'}</td>
                       <td style={{ padding: '0.75rem', fontSize: '0.875rem', textAlign: 'center' }}>
                         <span style={{
                           padding: '0.25rem 0.5rem',
                           borderRadius: '9999px',
                           fontSize: '0.75rem',
-                          background: booking.status === 'confirmed' ? '#E8F5E6' : booking.status === 'pending' ? '#FFF3E6' : '#FEE9E7',
-                          color: booking.status === 'confirmed' ? '#198A00' : booking.status === 'pending' ? '#EF7D00' : '#DE2010'
+                          background: booking.status === 'confirmed' ? '#E6F7F6' : booking.status === 'pending' ? '#E8F3EC' : '#E6F5F4',
+                          color: booking.status === 'confirmed' ? '#2BB2A9' : booking.status === 'pending' ? '#659E85' : '#1A8A82'
                         }}>
                           {booking.status}
                         </span>
@@ -672,7 +672,7 @@ export default function AgentDashboard() {
               </div>
               <div>
                 <p style={{ fontSize: '0.75rem', color: '#6B7280' }}>Commission Rate</p>
-                <p style={{ fontWeight: '500', color: '#198A00' }}>{agent?.commission_rate}%</p>
+                <p style={{ fontWeight: '500', color: '#2BB2A9' }}>{agent?.commission_rate}%</p>
               </div>
               <div>
                 <p style={{ fontSize: '0.75rem', color: '#6B7280' }}>Access</p>

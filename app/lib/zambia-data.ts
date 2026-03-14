@@ -2,10 +2,10 @@
 
 // Zambian Flag Colors
 export const zambianColors = {
-  green: '#198A00',      // Zambian Green - Natural resources
-  red: '#DE2010',        // Zambian Red - Struggle for freedom
+  green: '#2BB2A9',      // Zambian Green - Natural resources
+  red: '#1A8A82',        // Zambian Red - Struggle for freedom
   black: '#000000',      // Zambian Black - Zambian people
-  orange: '#EF7D00',     // Zambian Orange - Mineral wealth (copper)
+  orange: '#659E85',     // Zambian Orange - Mineral wealth (copper)
   white: '#FFFFFF',      // White - Unity
 };
 

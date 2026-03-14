@@ -52,14 +52,14 @@ export default function VerifyEmail() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E8F5E6, white, #FFF3E6)' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #E6F7F6, white, #E8F3EC)' }}>
       <div style={{ maxWidth: '400px', margin: '0 auto', padding: '4rem 1rem' }}>
         <div style={{
           background: 'white',
           borderRadius: '1rem',
           padding: '2rem',
           boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-          border: '2px solid #E8F5E6',
+          border: '2px solid #E6F7F6',
           textAlign: 'center'
         }}>
           {/* Header */}
@@ -76,8 +76,8 @@ export default function VerifyEmail() {
               <div style={{ 
                 width: '3rem', 
                 height: '3rem', 
-                border: '3px solid #E8F5E6',
-                borderTop: '3px solid #198A00',
+                border: '3px solid #E6F7F6',
+                borderTop: '3px solid #2BB2A9',
                 borderRadius: '50%',
                 animation: 'spin 1s linear infinite',
                 margin: '0 auto'
@@ -94,7 +94,7 @@ export default function VerifyEmail() {
                 style={{
                   display: 'inline-block',
                   padding: '0.75rem 2rem',
-                  background: 'linear-gradient(to right, #198A00, #EF7D00)',
+                  background: 'linear-gradient(to right, #2BB2A9, #659E85)',
                   color: 'white',
                   fontSize: '1rem',
                   fontWeight: '600',

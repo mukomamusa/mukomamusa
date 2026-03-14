@@ -1,50 +1,51 @@
 @import "tailwindcss";
 /* Global styles for VayaZed Bus Booking System */
-/* Custom theme for Zambian colors - Tailwind v4 */
+/* Custom theme for Vayazed Teal Color Scheme - Tailwind v4 */
 @theme {
-  --color-primary-50: #E8F5E6;
-  --color-primary-100: #C8E6C4;
-  --color-primary-200: #A5D69F;
-  --color-primary-300: #82C67A;
-  --color-primary-400: #67B95E;
-  --color-primary-500: #198A00;
-  --color-primary-600: #157A00;
-  --color-primary-700: #116600;
-  --color-primary-800: #0D5200;
-  --color-primary-900: #083E00;
+  --color-primary-50: #E6F7F6;
+  --color-primary-100: #CCEEEE;
+  --color-primary-200: #99E0DB;
+  --color-primary-300: #66D1C8;
+  --color-primary-400: #47C3B9;
+  --color-primary-500: #2BB2A9;
+  --color-primary-600: #259E96;
+  --color-primary-700: #1F8A83;
+  --color-primary-800: #197670;
+  --color-primary-900: #13625D;
   
-  --color-secondary-50: #FFF3E6;
-  --color-secondary-100: #FFE0BF;
-  --color-secondary-200: #FFCC95;
-  --color-secondary-300: #FFB86B;
-  --color-secondary-400: #FFA84B;
-  --color-secondary-500: #EF7D00;
-  --color-secondary-600: #D66F00;
-  --color-secondary-700: #BD6200;
-  --color-secondary-800: #A45500;
-  --color-secondary-900: #8B4800;
+  --color-secondary-50: #E6F5F4;
+  --color-secondary-100: #CDEBEB;
+  --color-secondary-200: #9BD7D7;
+  --color-secondary-300: #69C3C3;
+  --color-secondary-400: #47B5B5;
+  --color-secondary-500: #1A8A82;
+  --color-secondary-600: #157A74;
+  --color-secondary-700: #106A66;
+  --color-secondary-800: #0B5A58;
+  --color-secondary-900: #064A4A;
   
-  --color-accent-50: #FEE9E7;
-  --color-accent-100: #FCC8C3;
-  --color-accent-200: #FAA49B;
-  --color-accent-300: #F88073;
-  --color-accent-400: #F66455;
-  --color-accent-500: #DE2010;
-  --color-accent-600: #C81D0E;
-  --color-accent-700: #B81808;
-  --color-accent-800: #A01406;
-  --color-accent-900: #880F04;
+  --color-accent-50: #E8F3EC;
+  --color-accent-100: #D1E8DA;
+  --color-accent-200: #A3D8B5;
+  --color-accent-300: #75C790;
+  --color-accent-400: #57B77E;
+  --color-accent-500: #659E85;
+  --color-accent-600: #5A8E76;
+  --color-accent-700: #4F7E67;
+  --color-accent-800: #446E58;
+  --color-accent-900: #395E49;
 }
 
-/* Zambian Flag Inspired Design System */
+/* Vayazed Brand Colors - Teal Color Scheme */
 :root {
-  --zambian-green: #198A00;
-  --zambian-red: #DE2010;
-  --zambian-orange: #EF7D00;
-  --zambian-black: #000000;
+  --vayazed-teal: #2BB2A9;
+  --vayazed-dark-teal: #1A8A82;
+  --vayazed-green: #659E85;
+  --vayazed-beige: #B9B9A0;
+  --vayazed-black: #000103;
 }
 
-/* Custom Scrollbar with Zambian Colors */
+/* Custom Scrollbar with Vayazed Teal Colors */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -54,12 +55,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--zambian-green), var(--zambian-orange));
+  background: linear-gradient(180deg, var(--vayazed-teal), var(--vayazed-dark-teal));
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--zambian-orange), var(--zambian-red));
+  background: linear-gradient(180deg, var(--vayazed-dark-teal), var(--vayazed-green));
 }
 
 /* Smooth Animations */
@@ -71,23 +72,23 @@
 
 /* Selection Color */
 ::selection {
-  background-color: var(--zambian-orange);
+  background-color: var(--vayazed-teal);
   color: white;
 }
 
 ::-moz-selection {
-  background-color: var(--zambian-orange);
+  background-color: var(--vayazed-teal);
   color: white;
 }
 
 /* Focus Visible Styles */
 *:focus-visible {
-  outline: 2px solid #198A00;
+  outline: 2px solid #2BB2A9;
   outline-offset: 2px;
 }
 
 /* Loading Spinner */
-@keyframes spin-zambian {
+@keyframes spin-vayazed {
   from {
     transform: rotate(0deg);
   }
@@ -96,17 +97,17 @@
   }
 }
 
-.spinner-zambian {
-  animation: spin-zambian 1s linear infinite;
-  border: 3px solid rgba(25, 138, 0, 0.1);
-  border-top-color: var(--zambian-green);
+.spinner-vayazed {
+  animation: spin-vayazed 1s linear infinite;
+  border: 3px solid rgba(43, 178, 169, 0.1);
+  border-top-color: var(--vayazed-teal);
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 
 /* Pulse Animation for Important Elements */
-@keyframes pulse-zambian {
+@keyframes pulse-vayazed {
   0%, 100% {
     opacity: 1;
   }
@@ -115,8 +116,8 @@
   }
 }
 
-.pulse-zambian {
-  animation: pulse-zambian 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.pulse-vayazed {
+  animation: pulse-vayazed 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 /* Skeleton Loading */
@@ -180,8 +181,6 @@
 .animate-slide-up {
   animation: slide-up 0.3s ease-out forwards;
 }
-
-/* Add to app/globals.css */
 
 /* Modal backdrop */
 .fixed.inset-0.bg-black\/50 {

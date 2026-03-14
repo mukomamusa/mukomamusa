@@ -47,13 +47,13 @@ export function getPasswordResetEmail(resetLink: string, name: string): string {
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(to right, #198A00, #EF7D00); padding: 20px; text-align: center; }
+        .header { background: linear-gradient(to right, #2BB2A9, #659E85); padding: 20px; text-align: center; }
         .header h1 { color: white; margin: 0; font-size: 24px; }
         .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
-        .button { display: inline-block; padding: 12px 24px; background: #198A00; color: white; 
+        .button { display: inline-block; padding: 12px 24px; background: #2BB2A9; color: white; 
                   text-decoration: none; border-radius: 5px; font-weight: bold; margin: 20px 0; }
         .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
-        .warning { color: #DE2010; font-size: 14px; margin-top: 20px; }
+        .warning { color: #1A8A82; font-size: 14px; margin-top: 20px; }
       </style>
     </head>
     <body>
@@ -92,13 +92,13 @@ export function getVerificationEmail(verifyLink: string, name: string): string {
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(to right, #198A00, #EF7D00); padding: 20px; text-align: center; }
+        .header { background: linear-gradient(to right, #2BB2A9, #659E85); padding: 20px; text-align: center; }
         .header h1 { color: white; margin: 0; font-size: 24px; }
         .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
-        .button { display: inline-block; padding: 12px 24px; background: #198A00; color: white; 
+        .button { display: inline-block; padding: 12px 24px; background: #2BB2A9; color: white; 
                   text-decoration: none; border-radius: 5px; font-weight: bold; margin: 20px 0; }
         .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
-        .success-note { background: #E8F5E6; border-left: 4px solid #198A00; padding: 15px; margin: 20px 0; }
+        .success-note { background: #E6F7F6; border-left: 4px solid #2BB2A9; padding: 15px; margin: 20px 0; }
       </style>
     </head>
     <body>
@@ -116,7 +116,7 @@ export function getVerificationEmail(verifyLink: string, name: string): string {
           <p>If the button doesn't work, copy and paste this link into your browser:</p>
           <p style="word-break: break-all; font-size: 12px; color: #666;">${verifyLink}</p>
           <div class="success-note">
-            <p style="margin: 0; color: #198A00;">✅ Once verified, you'll be able to log in and access your driver portal.</p>
+            <p style="margin: 0; color: #2BB2A9;">✅ Once verified, you'll be able to log in and access your driver portal.</p>
           </div>
         </div>
         <div class="footer">

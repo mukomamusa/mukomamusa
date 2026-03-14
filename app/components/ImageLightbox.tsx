@@ -189,7 +189,7 @@ export default function ImageLightbox({ images, initialIndex = 0, isOpen, onClos
         {currentImage.image_type && currentImage.image_type !== 'general' && (
           <div style={{
             marginTop: '0.5rem',
-            color: '#EF7D00',
+            color: '#659E85',
             fontSize: '0.75rem',
             textTransform: 'uppercase',
             fontWeight: '600',
@@ -255,7 +255,7 @@ export default function ImageLightbox({ images, initialIndex = 0, isOpen, onClos
               style={{
                 width: '60px',
                 height: '45px',
-                border: idx === currentIndex ? '2px solid #EF7D00' : '2px solid transparent',
+                border: idx === currentIndex ? '2px solid #659E85' : '2px solid transparent',
                 borderRadius: '0.25rem',
                 overflow: 'hidden',
                 cursor: 'pointer',

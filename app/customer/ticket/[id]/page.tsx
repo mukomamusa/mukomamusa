@@ -132,7 +132,7 @@ export default function TicketView() {
                 src="/logo.jpg"
                 alt="VayaZed Logo"
                 className="w-11 h-11 rounded-xl border-2 border-primary-600"
-                style={{ objectFit: 'cover', objectPosition: 'center', background: 'linear-gradient(135deg, #E8F5E6, #FFF3E6)', boxShadow: '0 5px 12px rgba(0,0,0,0.18)' }}
+                style={{ objectFit: 'cover', objectPosition: 'center', background: 'linear-gradient(135deg, #E6F7F6, #E8F3EC)', boxShadow: '0 5px 12px rgba(0,0,0,0.18)' }}
               />
               <div>
                 <h1 className="text-xl font-bold text-primary-700">VayaZed Bus Booking</h1>

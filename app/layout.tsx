@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const viewport: Viewport = {
-  themeColor: '#198A00',
+  themeColor: '#2BB2A9',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -106,11 +106,11 @@ export default function RootLayout({
         <meta name="application-name" content="ZM Bus" />
         
         {/* Zambian theme colors */}
-        <meta name="theme-color" content="#198A00" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#083E00" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#2BB2A9" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#13625D" media="(prefers-color-scheme: dark)" />
         
         {/* Fallback for older browsers */}
-        <meta name="msapplication-TileColor" content="#198A00" />
+        <meta name="msapplication-TileColor" content="#2BB2A9" />
         <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
         
         {/* Preconnect to important domains */}

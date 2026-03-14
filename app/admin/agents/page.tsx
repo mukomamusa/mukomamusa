@@ -109,12 +109,12 @@ export default function AdminAgentsPage() {
 
   const getStatusBadge = (status: string, verified: number) => {
     if (status === 'suspended') {
-      return <span style={{ background: '#FEE9E7', color: '#DE2010', padding: '0.25rem 0.5rem', borderRadius: '9999px', fontSize: '0.75rem' }}>Suspended</span>;
+      return <span style={{ background: '#E6F5F4', color: '#1A8A82', padding: '0.25rem 0.5rem', borderRadius: '9999px', fontSize: '0.75rem' }}>Suspended</span>;
     }
     if (verified === 0) {
-      return <span style={{ background: '#FFF3E6', color: '#EF7D00', padding: '0.25rem 0.5rem', borderRadius: '9999px', fontSize: '0.75rem' }}>Pending</span>;
+      return <span style={{ background: '#E8F3EC', color: '#659E85', padding: '0.25rem 0.5rem', borderRadius: '9999px', fontSize: '0.75rem' }}>Pending</span>;
     }
-    return <span style={{ background: '#E8F5E6', color: '#198A00', padding: '0.25rem 0.5rem', borderRadius: '9999px', fontSize: '0.75rem' }}>Active</span>;
+    return <span style={{ background: '#E6F7F6', color: '#2BB2A9', padding: '0.25rem 0.5rem', borderRadius: '9999px', fontSize: '0.75rem' }}>Active</span>;
   };
 
   const handleLogout = () => {
@@ -126,7 +126,7 @@ export default function AdminAgentsPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#F3F4F6' }}>
       {/* Header */}
-      <header style={{ background: 'linear-gradient(to right, #0D5200, #083E00)', color: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #EF7D00' }}>
+      <header style={{ background: 'linear-gradient(to right, #197670, #13625D)', color: 'white', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderBottom: '4px solid #659E85' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '1rem 1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
@@ -134,7 +134,7 @@ export default function AdminAgentsPage() {
                 <img
                   src="/logo.jpg"
                   alt="VayaZed Logo"
-                  style={{ width: '48px', height: '48px', objectFit: 'cover', borderRadius: '0.5rem', border: '2px solid #EF7D00' }}
+                  style={{ width: '48px', height: '48px', objectFit: 'cover', borderRadius: '0.5rem', border: '2px solid #659E85' }}
                 />
               </Link>
               <div>
@@ -144,7 +144,7 @@ export default function AdminAgentsPage() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <Link href="/admin/dashboard" style={{ color: 'white', textDecoration: 'none', fontSize: '0.875rem' }}>← Back to Dashboard</Link>
-              <button onClick={handleLogout} style={{ padding: '0.5rem 1rem', background: '#DE2010', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: 'pointer' }}>Logout</button>
+              <button onClick={handleLogout} style={{ padding: '0.5rem 1rem', background: '#1A8A82', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: 'pointer' }}>Logout</button>
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function AdminAgentsPage() {
             </select>
             <button
               onClick={loadAgents}
-              style={{ padding: '0.5rem 1rem', background: '#198A00', color: 'white', border: 'none', borderRadius: '0.5rem', cursor: 'pointer' }}
+              style={{ padding: '0.5rem 1rem', background: '#2BB2A9', color: 'white', border: 'none', borderRadius: '0.5rem', cursor: 'pointer' }}
             >
               Refresh
             </button>
@@ -189,11 +189,11 @@ export default function AdminAgentsPage() {
           </div>
           <div style={{ background: 'white', borderRadius: '0.75rem', padding: '1rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
             <p style={{ fontSize: '0.75rem', color: '#6B7280' }}>Pending</p>
-            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#EF7D00' }}>{agents.filter(a => a.verified === 0).length}</p>
+            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#659E85' }}>{agents.filter(a => a.verified === 0).length}</p>
           </div>
           <div style={{ background: 'white', borderRadius: '0.75rem', padding: '1rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
             <p style={{ fontSize: '0.75rem', color: '#6B7280' }}>Active</p>
-            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#198A00' }}>{agents.filter(a => a.status === 'active' && a.verified === 1).length}</p>
+            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2BB2A9' }}>{agents.filter(a => a.status === 'active' && a.verified === 1).length}</p>
           </div>
           <div style={{ background: 'white', borderRadius: '0.75rem', padding: '1rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
             <p style={{ fontSize: '0.75rem', color: '#6B7280' }}>Total Earnings</p>
@@ -236,7 +236,7 @@ export default function AdminAgentsPage() {
                     <td style={{ padding: '0.75rem', textAlign: 'center' }}>
                       {agent.total_bookings || 0}
                     </td>
-                    <td style={{ padding: '0.75rem', textAlign: 'right', color: '#198A00', fontWeight: '600' }}>
+                    <td style={{ padding: '0.75rem', textAlign: 'right', color: '#2BB2A9', fontWeight: '600' }}>
                       K{(agent.total_earnings || 0).toFixed(2)}
                     </td>
                     <td style={{ padding: '0.75rem', textAlign: 'center' }}>
@@ -245,7 +245,7 @@ export default function AdminAgentsPage() {
                     <td style={{ padding: '0.75rem', textAlign: 'center' }}>
                       <button
                         onClick={() => { setSelectedAgent(agent); setShowModal(true); }}
-                        style={{ padding: '0.25rem 0.75rem', background: '#198A00', color: 'white', border: 'none', borderRadius: '0.25rem', cursor: 'pointer', fontSize: '0.75rem' }}
+                        style={{ padding: '0.25rem 0.75rem', background: '#2BB2A9', color: 'white', border: 'none', borderRadius: '0.25rem', cursor: 'pointer', fontSize: '0.75rem' }}
                       >
                         Manage
                       </button>
@@ -284,14 +284,14 @@ export default function AdminAgentsPage() {
                   <button
                     onClick={() => handleAction(selectedAgent.id, 'approve')}
                     disabled={actionLoading}
-                    style={{ padding: '0.5rem 1rem', background: '#198A00', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
+                    style={{ padding: '0.5rem 1rem', background: '#2BB2A9', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
                   >
                     Approve
                   </button>
                   <button
                     onClick={() => handleAction(selectedAgent.id, 'reject')}
                     disabled={actionLoading}
-                    style={{ padding: '0.5rem 1rem', background: '#DE2010', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
+                    style={{ padding: '0.5rem 1rem', background: '#1A8A82', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
                   >
                     Reject
                   </button>
@@ -301,7 +301,7 @@ export default function AdminAgentsPage() {
                 <button
                   onClick={() => handleAction(selectedAgent.id, 'suspend')}
                   disabled={actionLoading}
-                  style={{ padding: '0.5rem 1rem', background: '#EF7D00', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
+                  style={{ padding: '0.5rem 1rem', background: '#659E85', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
                 >
                   Suspend
                 </button>
@@ -310,7 +310,7 @@ export default function AdminAgentsPage() {
                 <button
                   onClick={() => handleAction(selectedAgent.id, 'activate')}
                   disabled={actionLoading}
-                  style={{ padding: '0.5rem 1rem', background: '#198A00', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
+                  style={{ padding: '0.5rem 1rem', background: '#2BB2A9', color: 'white', border: 'none', borderRadius: '0.375rem', cursor: actionLoading ? 'not-allowed' : 'pointer' }}
                 >
                   Reactivate
                 </button>

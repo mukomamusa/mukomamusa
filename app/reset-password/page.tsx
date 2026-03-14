@@ -62,7 +62,7 @@ function ResetPasswordContent() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #198A00 0%, #EF7D00 50%, #DE2010 100%)',
+      background: 'linear-gradient(135deg, #2BB2A9 0%, #659E85 50%, #1A8A82 100%)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -124,7 +124,7 @@ function ResetPasswordContent() {
               <Link href="/customer/login" style={{
                 display: 'block',
                 width: '100%',
-                background: 'linear-gradient(to right, #198A00, #EF7D00)',
+                background: 'linear-gradient(to right, #2BB2A9, #659E85)',
                 color: 'white',
                 padding: '0.75rem',
                 borderRadius: '0.5rem',
@@ -198,7 +198,7 @@ function ResetPasswordContent() {
                 disabled={loading || !token || !email}
                 style={{
                   width: '100%',
-                  background: loading || !token ? '#9CA3AF' : 'linear-gradient(to right, #198A00, #EF7D00)',
+                  background: loading || !token ? '#9CA3AF' : 'linear-gradient(to right, #2BB2A9, #659E85)',
                   color: 'white',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
@@ -233,7 +233,7 @@ export default function ResetPasswordPage() {
     <Suspense fallback={
       <div style={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #198A00 0%, #EF7D00 50%, #DE2010 100%)',
+        background: 'linear-gradient(135deg, #2BB2A9 0%, #659E85 50%, #1A8A82 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
