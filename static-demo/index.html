@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vayazed - Travel Without Limits | Bus Booking System v2.0.0</title>
+    <meta name="description" content="Vayazed v2.0.0 - Advanced Bus Booking System for Zambia with Real-time Tracking, Agent System, PWA Support, and Mobile Money Integration">
+    
+    <!-- Vayazed v2.0.0 Teal Color Scheme -->
+    <style>
+        :root {
+            --vayazed-teal: #2BB2A9;
+            --vayazed-dark-teal: #1A8A82;
+            --vayazed-green: #659E85;
+            --vayazed-beige: #B9B9A0;
+            --vayazed-black: #000103;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, var(--vayazed-teal), var(--vayazed-dark-teal));
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--vayazed-teal);
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: var(--vayazed-dark-teal);
+            margin-left: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--vayazed-teal);
+        }
+
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .version-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--vayazed-teal);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--vayazed-teal);
+        }
+
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--vayazed-teal);
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--vayazed-teal);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(43, 178, 169, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--vayazed-teal);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .new-badge {
+            background: var(--vayazed-green);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        .stats {
+            background: linear-gradient(135deg, var(--vayazed-dark-teal), var(--vayazed-teal));
+            color: white;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .deployment {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .deployment-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--vayazed-teal);
+            margin-bottom: 2rem;
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tech-item {
+            background: var(--vayazed-teal);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .demo-section {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .screenshot {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .screenshot-caption {
+            padding: 1rem;
+            background: #f8f9fa;
+            font-weight: 600;
+            color: var(--vayazed-teal);
+        }
+
+        footer {
+            background: var(--vayazed-black);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--vayazed-teal);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <span class="logo">Vayazed</span>
+                    <span class="tagline">Travel Without Limits</span>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#deployment">Deployment</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="version-badge">✨ Version 2.0.0 - Production Ready ✨</div>
+                <h1>Vayazed Bus Booking System</h1>
+                <p>Advanced intercity bus booking platform for Zambia with real-time tracking, agent system, and mobile money integration</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://00k2e.app.super.myninja.ai" class="btn btn-primary pulse">🚀 View Live Demo</a>
+                    <a href="https://github.com/mukomamusa/mukomamusa/pull/1" class="btn btn-secondary">📖 View GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>275</h3>
+                        <p>Files Merged</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>80+</h3>
+                        <p>API Endpoints</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>13</h3>
+                        <p>User Interfaces</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>PWA Ready</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>🚀 New in Version 2.0.0</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Real-time GPS Tracking <span class="new-badge">NEW</span></h3>
+                        <p>Track buses live on interactive maps with ETA calculations and route visualization</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Agent Booking System <span class="new-badge">NEW</span></h3>
+                        <p>Complete agent workflow with commission tracking and bulk booking capabilities</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Review & Rating System <span class="new-badge">NEW</span></h3>
+                        <p>Customer feedback system with star ratings and detailed reviews</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Progressive Web App <span class="new-badge">NEW</span></h3>
+                        <p>Installable app with offline support and background sync capabilities</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>Mobile Money Integration <span class="new-badge">NEW</span></h3>
+                        <p>Seamless payments with Airtel Money and MTN Mobile Money</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📧</div>
+                        <h3>Email Authentication <span class="new-badge">UPDATED</span></h3>
+                        <p>Enhanced security with email-based authentication system</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎫</div>
+                        <h3>Smart Seat Selection</h3>
+                        <p>Interactive seat maps with real-time availability and QR code tickets</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🏢</div>
+                        <h3>Multi-Role Dashboards</h3>
+                        <p>Specialized interfaces for customers, drivers, companies, agents, and admins</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Advanced Analytics</h3>
+                        <p>Comprehensive reporting with revenue tracking and performance metrics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <h2>📸 Application Screenshots</h2>
+                <p>Experience the modern, teal-branded interface across all user roles</p>
+                
+                <div class="screenshot-grid">
+                    <div class="screenshot">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMkJCMkE5Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxOCI+TG9naW4gU2NyZWVuPC90ZXh0Pgo8L3N2Zz4K" alt="Login Screen">
+                        <div class="screenshot-caption">Email-based Login</div>
+                    </div>
+                    
+                    <div class="screenshot">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMUE4QTgyIi8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxOCI+SG9tZSBEYXNoYm9hcmQ8L3RleHQ+Cjwvc3ZnPgo=" alt="Home Dashboard">
+                        <div class="screenshot-caption">Customer Dashboard</div>
+                    </div>
+                    
+                    <div class="screenshot">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjNjU5RTg1Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxOCI+R1BTIFRyYWNraW5nPC90ZXh0Pgo8L3N2Zz4K" alt="GPS Tracking">
+                        <div class="screenshot-caption">Real-time Tracking</div>
+                    </div>
+                    
+                    <div class="screenshot">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjQjlCOUEwIi8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJibGFjayIgZm9udC1zaXplPSIxOCI+U2VhdCBTZWxlY3Rpb248L3RleHQ+Cjwvc3ZnPgo=" alt="Seat Selection">
+                        <div class="screenshot-caption">Interactive Seats</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="https://00k2e.app.super.myninja.ai" class="btn btn-primary">🔗 Access Live Demo Application</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="deployment" class="deployment">
+            <div class="container">
+                <h2 style="text-align: center; color: var(--vayazed-teal); margin-bottom: 3rem;">🚀 Deployment Information</h2>
+                
+                <div class="deployment-info">
+                    <h3 style="color: var(--vayazed-teal); margin-bottom: 1rem;">📋 Current Status</h3>
+                    <p><strong>Demo Application:</strong> Live at <a href="https://00k2e.app.super.myninja.ai" style="color: var(--vayazed-teal);">https://00k2e.app.super.myninja.ai</a></p>
+                    <p><strong>Repository:</strong> <a href="https://github.com/mukomamusa/mukomamusa" style="color: var(--vayazed-teal);">mukomamusa/mukomamusa</a></p>
+                    <p><strong>Branch:</strong> merge-kabuya-v2.0 (Ready for production merge)</p>
+                    <p><strong>Pull Request:</strong> <a href="https://github.com/mukomamusa/mukomamusa/pull/1" style="color: var(--vayazed-teal);">PR #1 - Ready for Review</a></p>
+                </div>
+
+                <div class="deployment-info">
+                    <h3 style="color: var(--vayazed-teal); margin-bottom: 1rem;">⚡ Production Deployment Requirements</h3>
+                    <p>This is a full-stack Next.js application requiring a Node.js hosting environment:</p>
+                    <ul style="margin: 1rem 0; padding-left: 2rem;">
+                        <li><strong>Node.js 20+</strong> - For server-side rendering and API routes</li>
+                        <li><strong>Database</strong> - SQLite (dev) or PostgreSQL (production)</li>
+                        <li><strong>Environment Variables</strong> - Payment keys, database URLs, etc.</li>
+                        <li><strong>File System</strong> - For image uploads and ticket generation</li>
+                    </ul>
+                </div>
+
+                <div class="deployment-info">
+                    <h3 style="color: var(--vayazed-teal); margin-bottom: 1rem;">🌐 Recommended Hosting Platforms</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">Vercel</div>
+                        <div class="tech-item">Railway</div>
+                        <div class="tech-item">Netlify</div>
+                        <div class="tech-item">DigitalOcean</div>
+                        <div class="tech-item">AWS</div>
+                        <div class="tech-item">Heroku</div>
+                    </div>
+                </div>
+
+                <div class="deployment-info">
+                    <h3 style="color: var(--vayazed-teal); margin-bottom: 1rem;">🛠️ Technology Stack</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">Next.js 16</div>
+                        <div class="tech-item">React 19</div>
+                        <div class="tech-item">TypeScript</div>
+                        <div class="tech-item">Tailwind CSS</div>
+                        <div class="tech-item">SQLite/PostgreSQL</div>
+                        <div class="tech-item">PWA</div>
+                        <div class="tech-item">WebSocket</div>
+                        <div class="tech-item">Mobile Money</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/mukomamusa/mukomamusa">GitHub Repository</a>
+                <a href="https://github.com/mukomamusa/mukomamusa/pull/1">Pull Request</a>
+                <a href="https://00k2e.app.super.myninja.ai">Live Demo</a>
+            </div>
+            <p>&copy; 2026 Vayazed Bus Booking System v2.0.0 - Travel Without Limits</p>
+            <p>Built with ❤️ using Next.js, React, and modern web technologies</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

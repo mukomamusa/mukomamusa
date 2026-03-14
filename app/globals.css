@@ -1,0 +1,246 @@
+@import "tailwindcss";
+/* Global styles for VayaZed Bus Booking System */
+/* Custom theme for Vayazed Teal Color Scheme - Tailwind v4 */
+@theme {
+  --color-primary-50: #E6F7F6;
+  --color-primary-100: #CCEEEE;
+  --color-primary-200: #99E0DB;
+  --color-primary-300: #66D1C8;
+  --color-primary-400: #47C3B9;
+  --color-primary-500: #2BB2A9;
+  --color-primary-600: #259E96;
+  --color-primary-700: #1F8A83;
+  --color-primary-800: #197670;
+  --color-primary-900: #13625D;
+  
+  --color-secondary-50: #E6F5F4;
+  --color-secondary-100: #CDEBEB;
+  --color-secondary-200: #9BD7D7;
+  --color-secondary-300: #69C3C3;
+  --color-secondary-400: #47B5B5;
+  --color-secondary-500: #1A8A82;
+  --color-secondary-600: #157A74;
+  --color-secondary-700: #106A66;
+  --color-secondary-800: #0B5A58;
+  --color-secondary-900: #064A4A;
+  
+  --color-accent-50: #E8F3EC;
+  --color-accent-100: #D1E8DA;
+  --color-accent-200: #A3D8B5;
+  --color-accent-300: #75C790;
+  --color-accent-400: #57B77E;
+  --color-accent-500: #659E85;
+  --color-accent-600: #5A8E76;
+  --color-accent-700: #4F7E67;
+  --color-accent-800: #446E58;
+  --color-accent-900: #395E49;
+}
+
+/* Vayazed Brand Colors - Teal Color Scheme */
+:root {
+  --vayazed-teal: #2BB2A9;
+  --vayazed-dark-teal: #1A8A82;
+  --vayazed-green: #659E85;
+  --vayazed-beige: #B9B9A0;
+  --vayazed-black: #000103;
+}
+
+/* Custom Scrollbar with Vayazed Teal Colors */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--vayazed-teal), var(--vayazed-dark-teal));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--vayazed-dark-teal), var(--vayazed-green));
+}
+
+/* Smooth Animations */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--vayazed-teal);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--vayazed-teal);
+  color: white;
+}
+
+/* Focus Visible Styles */
+*:focus-visible {
+  outline: 2px solid #2BB2A9;
+  outline-offset: 2px;
+}
+
+/* Loading Spinner */
+@keyframes spin-vayazed {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-vayazed {
+  animation: spin-vayazed 1s linear infinite;
+  border: 3px solid rgba(43, 178, 169, 0.1);
+  border-top-color: var(--vayazed-teal);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Pulse Animation for Important Elements */
+@keyframes pulse-vayazed {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse-vayazed {
+  animation: pulse-vayazed 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Skeleton Loading */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 0px, #e0e0e0 40px, #f0f0f0 80px);
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+/* Slide up animation for prompts */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+/* Modal backdrop */
+.fixed.inset-0.bg-black\/50 {
+  backdrop-filter: blur(4px);
+}
+
+/* Modal container */
+.fixed.inset-0.bg-black\/50 > div {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Modal header sticky positioning */
+.sticky.top-0 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Modal animations */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure modals appear above everything */
+.z-\[9999\] {
+  z-index: 9999;
+}
+
+/* Dialog animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialogEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-dialogEnter {
+  animation: dialogEnter 0.2s ease-out forwards;
+}
