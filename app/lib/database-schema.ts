@@ -469,7 +469,7 @@ export function initDatabase() {
   console.log('Database initialized successfully with enhanced schema');
 
   // ==========================================
-  // REAL-TIME TRACKING TABLES (from city-to-city-zambia)
+  // REAL-TIME TRACKING TABLES (from Vayazed)
   // ==========================================
   
   // GPS Devices table — links physical GPS tracker to a bus

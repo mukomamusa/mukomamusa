@@ -312,7 +312,7 @@ NEXT_PUBLIC_APP_THEME_COLOR=#2BB2A9
 
 ### Key Documentation Locations
 ```
-/workspace/city-to-city-fresh/
+/workspace/vayazed-fresh/
 ├── README.md
 ├── API_DOCUMENTATION_V2.md
 ├── DEVELOPER_GUIDE_V2.md
@@ -381,8 +381,8 @@ npm run deploy:production
 ### Useful Links
 - GitHub Repository: https://github.com/mukomamusa/mukomamusa
 - Branch: merge-kabuya-v2.0
-- API Docs: `/workspace/city-to-city-fresh/API_DOCUMENTATION_V2.md`
-- Dev Guide: `/workspace/city-to-city-fresh/DEVELOPER_GUIDE_V2.md`
+- API Docs: `/workspace/vayazed-fresh/API_DOCUMENTATION_V2.md`
+- Dev Guide: `/workspace/vayazed-fresh/DEVELOPER_GUIDE_V2.md`
 
 ### Quick Commands
 ```bash
