@@ -45,7 +45,7 @@ Password: password123
 #### Step 1: Access Homepage
 - [ ] Go to https://001eu.app.super.myninja.ai
 - [ ] Verify homepage loads with search form
-- [ ] Check Vayazed branding is displayed (not "City to City")
+- [ ] Check Vayazed branding is displayed (not "Vayazed")
 - [ ] Verify color scheme is teal (#2BB2A9)
 
 #### Step 2: Search for Buses
